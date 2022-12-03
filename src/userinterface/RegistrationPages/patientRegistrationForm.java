@@ -4,7 +4,17 @@
  */
 package userinterface.RegistrationPages;
 
+import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -63,6 +73,7 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         diagnosedDateField = new com.toedter.calendar.JDateChooser();
         labelName11 = new javax.swing.JLabel();
+        buttonBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -295,6 +306,15 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        buttonBack.setBackground(new java.awt.Color(255, 164, 0));
+        buttonBack.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
+        buttonBack.setText("Go Back ");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -355,7 +375,8 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                                     .addComponent(buttonAddPhoto, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
                             .addComponent(labelName10, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonAddPatient))
+                            .addComponent(buttonAddPatient)
+                            .addComponent(buttonBack))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -426,7 +447,9 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(buttonAddPatient)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addComponent(buttonBack)
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -472,6 +495,31 @@ public class patientRegistrationForm extends javax.swing.JPanel {
 
     private void buttonAddPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddPhotoActionPerformed
         // TODO add your handling code here:
+               JFileChooser file = new JFileChooser();
+          file.setCurrentDirectory(new File(System.getProperty("user.dir")));
+          //filter the files
+          FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
+          file.addChoosableFileFilter(filter);
+          int result = file.showSaveDialog(null);
+           //if the user click on save in Jfilechooser
+          if(result == JFileChooser.APPROVE_OPTION){
+              File selectedFile = file.getSelectedFile();
+              tempdP = new byte[(int) selectedFile.length()]; 
+                FileInputStream fis;
+             try {
+                 fis = new FileInputStream(selectedFile);
+                 fis.read(tempdP);
+                 fis.close();
+             } catch (IOException ex) {
+                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+             }             
+              labelPhoto.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
+              labelPhoto.setIcon(setPicture(selectedFile.getAbsolutePath(),labelPhoto));
+          }
+
+          else if(result == JFileChooser.CANCEL_OPTION){
+              System.out.println("No File Select");
+          }
     }//GEN-LAST:event_buttonAddPhotoActionPerformed
 
     private void fieldHLATypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHLATypeActionPerformed
@@ -510,11 +558,36 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldZipCodeKeyReleased
 
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonBackActionPerformed
+
+        public ImageIcon ResizeImage(String ImagePath)
+    {
+        ImageIcon MyImage = new ImageIcon(ImagePath);
+        Image img = MyImage.getImage();
+        Image newImg = img.getScaledInstance(labelPhoto.getWidth(), labelPhoto.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon image = new ImageIcon(newImg);
+        return image;
+    }
+        
+    private ImageIcon setPicture(String carImageLocation, JLabel carImage){
+
+        ImageIcon imageCar;
+        imageCar = new ImageIcon(carImageLocation);
+        Image picCar = imageCar.getImage();
+        Image resizedImage = picCar.getScaledInstance(carImage.getWidth(), carImage.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon selectedCarPicture = new ImageIcon(resizedImage);
+        
+        return selectedCarPicture;  
+}
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageText;
     private javax.swing.JButton buttonAddPatient;
     private javax.swing.JButton buttonAddPhoto;
+    private javax.swing.JButton buttonBack;
     private com.toedter.calendar.JDateChooser diagnosedDateField;
     private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JTextField fieldAddress;
