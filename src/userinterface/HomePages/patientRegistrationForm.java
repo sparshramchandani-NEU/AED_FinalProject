@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package userinterface.RegistrationPages;
+package userinterface.HomePages;
 
 import java.awt.Image;
 import java.io.File;
@@ -53,7 +53,6 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         genderJComboBox = new javax.swing.JComboBox();
         labelName5 = new javax.swing.JLabel();
         buttonAddPatient = new javax.swing.JButton();
-        dobDateField = new com.toedter.calendar.JDateChooser();
         labelPhoto = new javax.swing.JLabel();
         buttonAddPhoto = new javax.swing.JButton();
         fieldHLAType = new javax.swing.JTextField();
@@ -71,11 +70,13 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         jRadioButtonYes = new javax.swing.JRadioButton();
         jRadioButtonNo = new javax.swing.JRadioButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        diagnosedDateField = new com.toedter.calendar.JDateChooser();
         labelName11 = new javax.swing.JLabel();
+        cancerdiagnosedDateField = new com.toedter.calendar.JDateChooser();
         buttonBack = new javax.swing.JButton();
+        dobDateField = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(772, 513));
 
         labelName.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
         labelName.setText("Patient Name");
@@ -157,14 +158,12 @@ public class patientRegistrationForm extends javax.swing.JPanel {
 
         buttonAddPatient.setBackground(new java.awt.Color(255, 164, 0));
         buttonAddPatient.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
-        buttonAddPatient.setText("Add Patient Details");
+        buttonAddPatient.setText("Sign up as Patient");
         buttonAddPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAddPatientActionPerformed(evt);
             }
         });
-
-        dobDateField.setBackground(new java.awt.Color(255, 255, 255));
 
         labelPhoto.setBackground(new java.awt.Color(0, 0, 0));
         labelPhoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -278,13 +277,13 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         jRadioButtonNo.setText("No");
         jRadioButtonNo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        diagnosedDateField.setBackground(new java.awt.Color(255, 255, 255));
-
         labelName11.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
         labelName11.setText("Diagnosed Date");
 
-        jLayeredPane1.setLayer(diagnosedDateField, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        cancerdiagnosedDateField.setBackground(new java.awt.Color(255, 255, 255));
+
         jLayeredPane1.setLayer(labelName11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(cancerdiagnosedDateField, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -292,17 +291,17 @@ public class patientRegistrationForm extends javax.swing.JPanel {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addComponent(labelName11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(diagnosedDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cancerdiagnosedDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 33, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelName11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(diagnosedDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cancerdiagnosedDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelName11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -314,6 +313,8 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                 buttonBackActionPerformed(evt);
             }
         });
+
+        dobDateField.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -336,13 +337,14 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                                         .addComponent(labelName4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(labelName5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(genderJComboBox, 0, 183, Short.MAX_VALUE)
-                                    .addComponent(ageText, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
-                                    .addComponent(fieldPatientName, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
-                                    .addComponent(fieldPatientID, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
-                                    .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(fieldHLAType))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(genderJComboBox, 0, 183, Short.MAX_VALUE)
+                                        .addComponent(ageText, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                                        .addComponent(fieldPatientName, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                                        .addComponent(fieldPatientID, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                                        .addComponent(fieldHLAType))
+                                    .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
@@ -365,7 +367,7 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(labelEmail1, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                                             .addComponent(labelEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(fieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fieldContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -383,7 +385,7 @@ public class patientRegistrationForm extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,11 +400,15 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelName2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(fieldPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelName1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelName1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(7, 7, 7)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelName3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ageText, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -445,9 +451,9 @@ public class patientRegistrationForm extends javax.swing.JPanel {
                     .addComponent(jRadioButtonNo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(buttonAddPatient)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonBack)
                 .addGap(20, 20, 20))
         );
@@ -495,31 +501,7 @@ public class patientRegistrationForm extends javax.swing.JPanel {
 
     private void buttonAddPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddPhotoActionPerformed
         // TODO add your handling code here:
-               JFileChooser file = new JFileChooser();
-          file.setCurrentDirectory(new File(System.getProperty("user.dir")));
-          //filter the files
-          FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
-          file.addChoosableFileFilter(filter);
-          int result = file.showSaveDialog(null);
-           //if the user click on save in Jfilechooser
-          if(result == JFileChooser.APPROVE_OPTION){
-              File selectedFile = file.getSelectedFile();
-              tempdP = new byte[(int) selectedFile.length()]; 
-                FileInputStream fis;
-             try {
-                 fis = new FileInputStream(selectedFile);
-                 fis.read(tempdP);
-                 fis.close();
-             } catch (IOException ex) {
-                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
-             }             
-              labelPhoto.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
-              labelPhoto.setIcon(setPicture(selectedFile.getAbsolutePath(),labelPhoto));
-          }
 
-          else if(result == JFileChooser.CANCEL_OPTION){
-              System.out.println("No File Select");
-          }
     }//GEN-LAST:event_buttonAddPhotoActionPerformed
 
     private void fieldHLATypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldHLATypeActionPerformed
@@ -588,7 +570,7 @@ public class patientRegistrationForm extends javax.swing.JPanel {
     private javax.swing.JButton buttonAddPatient;
     private javax.swing.JButton buttonAddPhoto;
     private javax.swing.JButton buttonBack;
-    private com.toedter.calendar.JDateChooser diagnosedDateField;
+    private com.toedter.calendar.JDateChooser cancerdiagnosedDateField;
     private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JTextField fieldAddress;
     private javax.swing.JTextField fieldCity;
