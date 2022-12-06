@@ -93,7 +93,6 @@ public class MedicalTechnicianWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinField1 = new com.toedter.components.JSpinField();
         Header = new javax.swing.JPanel();
         BtnProfile = new javax.swing.JLabel();
         BtnManageRequest = new javax.swing.JLabel();
@@ -102,11 +101,11 @@ public class MedicalTechnicianWorkAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1150, 720));
         setLayout(new java.awt.BorderLayout());
 
-        Header.setBackground(new java.awt.Color(15, 29, 52));
+        Header.setBackground(new java.awt.Color(0, 0, 0));
         Header.setPreferredSize(new java.awt.Dimension(800, 70));
         Header.setLayout(new java.awt.GridLayout(1, 0));
 
-        BtnProfile.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnProfile.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         BtnProfile.setForeground(new java.awt.Color(255, 255, 255));
         BtnProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BtnProfile.setText("Profile");
@@ -118,7 +117,7 @@ public class MedicalTechnicianWorkAreaJPanel extends javax.swing.JPanel {
         });
         Header.add(BtnProfile);
 
-        BtnManageRequest.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BtnManageRequest.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         BtnManageRequest.setForeground(new java.awt.Color(255, 255, 255));
         BtnManageRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BtnManageRequest.setText("Manage Request");
@@ -132,7 +131,7 @@ public class MedicalTechnicianWorkAreaJPanel extends javax.swing.JPanel {
 
         add(Header, java.awt.BorderLayout.PAGE_START);
 
-        userProcessContainer.setBackground(new java.awt.Color(255, 153, 153));
+        userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         add(userProcessContainer, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -160,7 +159,6 @@ public class MedicalTechnicianWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel BtnManageRequest;
     private javax.swing.JLabel BtnProfile;
     private javax.swing.JPanel Header;
-    private com.toedter.components.JSpinField jSpinField1;
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables
 }
