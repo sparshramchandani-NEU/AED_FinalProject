@@ -13,14 +13,14 @@ import java.util.ArrayList;
  * @author HP
  */
 public class Leukemia_Centre_Organization extends Organization{
-    public LegalOfficerOrganization() {
-        super(Organization.LegalType.LegalOfficer.getValue());
+    public Leukemia_Centre_Organization() {
+        super(Organization.BloodCancerCentreType.BloodCancerCentre.getValue());
     }
     
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new LegalOfficerRole());
+        roles.add(new Leukemia_Centre_Coordinator_Role());
         return roles;
     }
 }

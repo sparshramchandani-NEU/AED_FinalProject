@@ -45,6 +45,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         rightJPanel = new javax.swing.JPanel();
+        imgHope = new javax.swing.JLabel();
         leftJPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnLogin = new javax.swing.JButton();
@@ -65,7 +66,27 @@ public class MainJFrame extends javax.swing.JFrame {
 
         rightJPanel.setBackground(new java.awt.Color(255, 164, 0));
         rightJPanel.setAutoscrolls(true);
-        rightJPanel.setLayout(new java.awt.CardLayout());
+
+        imgHope.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePages/background.jpg"))); // NOI18N
+        imgHope.setPreferredSize(new java.awt.Dimension(789, 744));
+
+        javax.swing.GroupLayout rightJPanelLayout = new javax.swing.GroupLayout(rightJPanel);
+        rightJPanel.setLayout(rightJPanelLayout);
+        rightJPanelLayout.setHorizontalGroup(
+            rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rightJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgHope, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        rightJPanelLayout.setVerticalGroup(
+            rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rightJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgHope, javax.swing.GroupLayout.DEFAULT_SIZE, 789, Short.MAX_VALUE)
+                .addGap(83, 83, 83))
+        );
+
         jSplitPane1.setRightComponent(rightJPanel);
 
         leftJPanel.setAutoscrolls(true);
@@ -159,19 +180,18 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addContainerGap()
                             .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsername)
-                            .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblUsername)
+                                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +212,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
 
         leftJPanel.add(jPanel3, "card2");
@@ -367,6 +387,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPatientRegistration;
+    private javax.swing.JLabel imgHope;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
