@@ -214,6 +214,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblInjuryConfirmation = new javax.swing.JLabel();
         txtHLAType = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
+        dobDateField = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -482,6 +483,31 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, 80, 30));
+
+        dobDateField.setBackground(new java.awt.Color(255, 255, 255));
+        dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dobDateField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                dobDateFieldFocusLost(evt);
+            }
+        });
+        dobDateField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dobDateFieldMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                dobDateFieldMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                dobDateFieldagePop(evt);
+            }
+        });
+        dobDateField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dobDateFielduDobKeyTyped(evt);
+            }
+        });
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -880,9 +906,9 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     }//GEN-LAST:event_formMouseClicked
 
     private void dobDateFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldMouseExited
-  //    Date dob = dobDateField.getDate();
- //       System.out.println(dob.getYear());
-    //    ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+        //    Date dob = dobDateField.getDate();
+        //       System.out.println(dob.getYear());
+        //    ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
     }//GEN-LAST:event_dobDateFieldMouseExited
 
     public ImageIcon ResizeImage(String ImagePath)
@@ -906,13 +932,13 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
 }    
     
     private void dobDateFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldMousePressed
-     
+
     }//GEN-LAST:event_dobDateFieldMousePressed
 
     
     private void dobDateFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dobDateFieldFocusLost
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_dobDateFieldFocusLost
 
     private void agePop(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agePop
@@ -946,6 +972,43 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeActionPerformed
 
+    private void dobDateFieldagePop(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldagePop
+        // TODO add your handling code here:
+        Date dob = dobDateField.getDate();
+        System.out.println(dob.getYear());
+        txtAge.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+
+    }//GEN-LAST:event_dobDateFieldagePop
+
+    private void dobDateFielduDobKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dobDateFielduDobKeyTyped
+        // TODO add your handling code here:
+        // System.out.println("date");
+        /*
+
+        Date dob = dobDateField.getDate();
+
+        LocalDate today = LocalDate.now();                          //Today's date
+        LocalDate birthday;  //Birth date
+        birthday = LocalDate.of(dob);
+
+        Period p = Period.between(birthday, today);
+
+        ageText.setText(String.valueOf(p.getYears()));
+        String dobq=  calculateAge(dob, today);
+
+        }
+
+        */
+        /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+            if ((birthDate != null) && (currentDate != null)) {
+                return Period.between(birthDate, currentDate).getYears();
+            } else {
+                return 0;
+            }
+
+            */
+    }//GEN-LAST:event_dobDateFielduDobKeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddPhoto;
@@ -961,6 +1024,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     private javax.swing.JRadioButton btnYesQ4;
     private javax.swing.JComboBox cmbGender;
     private javax.swing.JComboBox cmbState;
+    private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;

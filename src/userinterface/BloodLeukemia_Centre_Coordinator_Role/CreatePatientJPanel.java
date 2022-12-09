@@ -34,12 +34,6 @@ import javax.swing.table.DefaultTableModel;
  * @author nitin
  */
 public class CreatePatientJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form CreatePatientJPanel
-     */
-     //private JPanel userProcessContainerJPanel;
-     //private PatientDirectory patientDirectory;
     private  EcoSystem system;
      private UserAccount userAccount;
      private Network network;
@@ -47,7 +41,6 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
 
     CreatePatientJPanel(EcoSystem system, UserAccount userAccount, Network network) {
         initComponents();
-        //this.patientDirectory = patientDirectory;
        
         this.system = system;
         this.userAccount = userAccount;
@@ -55,13 +48,13 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         populateTable();
         populatePatientTable();
         
-        tblPatient.getTableHeader().setDefaultRenderer(new MyTableFormat());
-        tblRequest.getTableHeader().setDefaultRenderer(new MyTableFormat());
+        tblPatientDetails.getTableHeader().setDefaultRenderer(new MyTableFormat());
+        tblRequestDetails.getTableHeader().setDefaultRenderer(new MyTableFormat());
         
     }
     
     private void populatePatientTable(){
-    DefaultTableModel dtmA = (DefaultTableModel)tblPatient.getModel();
+    DefaultTableModel dtmA = (DefaultTableModel)tblPatientDetails.getModel();
       dtmA.setRowCount(0);
       Object row[] = new Object[5];
        String line = "";  
@@ -88,7 +81,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
     }
     
      private void populateTable(){
-        DefaultTableModel dtm = (DefaultTableModel) tblRequest.getModel();
+        DefaultTableModel dtm = (DefaultTableModel) tblRequestDetails.getModel();
         
         dtm.setRowCount(0);
         
@@ -121,7 +114,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         txtUID = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblPateintDetails = new javax.swing.JTable();
+        tblPatientDetails = new javax.swing.JTable();
         lblListOfPatients = new javax.swing.JLabel();
         lblPatientDetails = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -158,10 +151,10 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         txtEmail.setEnabled(false);
         add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 212, -1));
 
-        tblPateintDetails.setBackground(new java.awt.Color(0, 0, 0));
-        tblPateintDetails.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        tblPateintDetails.setForeground(new java.awt.Color(255, 255, 255));
-        tblPateintDetails.setModel(new javax.swing.table.DefaultTableModel(
+        tblPatientDetails.setBackground(new java.awt.Color(0, 0, 0));
+        tblPatientDetails.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        tblPatientDetails.setForeground(new java.awt.Color(255, 255, 255));
+        tblPatientDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -177,15 +170,15 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblPateintDetails.setFocusable(false);
-        tblPateintDetails.setGridColor(new java.awt.Color(0, 0, 0));
-        tblPateintDetails.setRowHeight(30);
-        tblPateintDetails.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblPatientDetails.setFocusable(false);
+        tblPatientDetails.setGridColor(new java.awt.Color(0, 0, 0));
+        tblPatientDetails.setRowHeight(30);
+        tblPatientDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tblPateintDetailsMousePressed(evt);
+                tblPatientDetailsMousePressed(evt);
             }
         });
-        jScrollPane1.setViewportView(tblPateintDetails);
+        jScrollPane1.setViewportView(tblPatientDetails);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 890, 210));
 
@@ -270,9 +263,9 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         add(chkEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tblPateintDetailsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPateintDetailsMousePressed
+    private void tblPatientDetailsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPatientDetailsMousePressed
         // TODO add your handling code here:
-        int selectedRow = tblPatient.getSelectedRow();
+        int selectedRow = tblPatientDetails.getSelectedRow();
         
         if(selectedRow < 0){
             
@@ -282,19 +275,19 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
 
             //String.valueOf(tblGoogleSheet.getValueAt(selectedRow, 0));
 
-            uidTextField.setText( String.valueOf(tblPatient.getValueAt(selectedRow, 0)));
-             nameTextField.setText( String.valueOf(tblPatient.getValueAt(selectedRow, 1)));
-            emailTextField.setText( String.valueOf(tblPatient.getValueAt(selectedRow, 2)));
+            txtUID.setText( String.valueOf(tblPatientDetails.getValueAt(selectedRow, 0)));
+             txtName.setText( String.valueOf(tblPatientDetails.getValueAt(selectedRow, 1)));
+            txtEmail.setText( String.valueOf(tblPatientDetails.getValueAt(selectedRow, 2)));
             
-            HLATypesTextField.setText( String.valueOf(tblPatient.getValueAt(selectedRow, 4)));
+            txtHLAList.setText( String.valueOf(tblPatientDetails.getValueAt(selectedRow, 4)));
             
             
-            btnCreateReceiver.setEnabled(true);
+            btnCreateProfile.setEnabled(true);
             chkEmergency.setEnabled(true);
             
 
         }
-    }//GEN-LAST:event_tblPateintDetailsMousePressed
+    }//GEN-LAST:event_tblPatientDetailsMousePressed
 
     private void btnCreateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateProfileActionPerformed
         // TODO add your handling code here:
@@ -302,11 +295,11 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
          Patient patient = new Patient();
 //        Patient patient = system.getPatientDirectory().addPatient();
         
-        patient.setReceiverID(uidTextField.getText());
-        patient.setName(nameTextField.getText());
-        patient.setEmailID((emailTextField.getText()));
+        patient.setReceiverID(txtUID.getText());
+        patient.setName(txtName.getText());
+        patient.setEmailID((txtEmail.getText()));
         try {
-            patient.getHLA().updateHLAlist(HLATypesTextField.getText());
+            patient.getHLA().updateHLAlist(txtHLAList.getText());
         }
         catch (Exception e) {
             JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Patient's HLA Type can only be one of these HLA_A,HLA_B,HLA_C,HLA_DR,HLA_DBQ1</b></html>"));
@@ -375,13 +368,13 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         }
         
         chkEmergency.setEnabled(false);
-        btnCreateReceiver.setEnabled(false);
+        btnCreateProfile.setEnabled(false);
         
-        uidTextField.setText("");
-        nameTextField.setText("");
-        emailTextField.setText("");
-        HLATypesTextField.setText("");
-    }                                                 
+        txtUID.setText("");
+        txtName.setText("");
+        txtEmail.setText("");
+        txtHLAList.setText("");
+                                                    
 
     }//GEN-LAST:event_btnCreateProfileActionPerformed
 
@@ -399,7 +392,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPatientDetails;
     private javax.swing.JLabel lblUID;
-    private javax.swing.JTable tblPateintDetails;
+    private javax.swing.JTable tblPatientDetails;
     private javax.swing.JTable tblRequestDetails;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtHLAList;

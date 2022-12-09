@@ -12,6 +12,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Bone_Marrow_Bank_Organization;
+import Business.Organization.MedicalTechnicianOrganization;
 import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
@@ -25,13 +26,13 @@ public class ManageMedicalTechnicianProfile extends javax.swing.JPanel {
      
      private UserAccount userAccount;
      private Enterprise enterprise ;
-     private Bone_Marrow_Bank_Organization bmBankOrganization;
+     private MedicalTechnicianOrganization pathoOrganization;
     
-    public ManageMedicalTechnicianProfile(UserAccount userAccount, Bone_Marrow_Bank_Organization bmBankOrganization, Enterprise enterprise) {
+    public ManageMedicalTechnicianProfile(UserAccount userAccount, MedicalTechnicianOrganization pathoOrganization, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.bmBankOrganization = bmBankOrganization;
+        this.pathoOrganization = pathoOrganization;
         populateFields();
     }
 

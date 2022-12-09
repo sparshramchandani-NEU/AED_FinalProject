@@ -123,6 +123,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         btnApprove = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
+        covidDiagnosedDateChooser = new com.toedter.calendar.JDateChooser();
+        dobDateField = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1000, 700));
@@ -190,8 +192,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 190, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setText("Covid diagnosed date");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 720, -1, -1));
+        jLabel11.setText("Cancer diagnosed date");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 720, -1, -1));
 
         lblStreetAddress.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblStreetAddress.setText("Street address");
@@ -306,7 +308,6 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setForeground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 164, 0)));
-        lblProfilePicture.setBounds(new java.awt.Rectangle(255, 164, 0, 0));
         lblProfilePicture.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 310, 160, 140));
 
@@ -333,6 +334,16 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         btnReject.setBackground(new java.awt.Color(255, 164, 0));
         btnReject.setText("Reject");
         add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 490, 80, -1));
+
+        covidDiagnosedDateChooser.setBackground(new java.awt.Color(0, 0, 0));
+        covidDiagnosedDateChooser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        covidDiagnosedDateChooser.setForeground(new java.awt.Color(255, 255, 255));
+        add(covidDiagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 720, 180, -1));
+
+        dobDateField.setBackground(new java.awt.Color(0, 0, 0));
+        dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dobDateField.setForeground(new java.awt.Color(255, 255, 255));
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtContactNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContactNumberActionPerformed
@@ -392,6 +403,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnReject;
+    private com.toedter.calendar.JDateChooser covidDiagnosedDateChooser;
+    private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel19;
@@ -435,8 +448,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
     private void populateRequestDetails(PatientRequest patientRequest) {
             txtUID.setText(patientRequest.getReceiverID());
             txtName.setText(patientRequest.getName());
-            dobDateField.setDate(patientRequest.getDob());
-            diagnosedDateChooser.setDate(patientRequest.getCancerDiagnosedDate());
+            covidDiagnosedDateChooser.setDate(patientRequest.getDob());
+            covidDiagnosedDateChooser.setDate(patientRequest.getCancerDiagnosedDate());
             txtAge.setText(String.valueOf(patientRequest.getAge()));
             txtGender.setText(patientRequest.getGender());
             txtHLAType.setText(String.join(", ", (Iterable<String>) patientRequest.getHla().getHlaValuesList()));
@@ -477,8 +490,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
             txtEmailID.setEditable(false);
             txtStatus.setEditable(false);
             txtLabConfirmation.setEditable(false);     
-            diagnosedDateChooser.setEnabled(false);
             dobDateField.setEnabled(false);
+            covidDiagnosedDateChooser.setEnabled(false);
     }
     
     private ImageIcon setPicturebyte(byte[] byteArrayImage){
