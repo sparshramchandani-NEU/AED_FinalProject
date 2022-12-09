@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author HP
  */
 public class UserAccountDirectory {
-    public class UserAccountDirectory {
+    
        private ArrayList<UserAccount> userAccountList;
 
     public UserAccountDirectory() {

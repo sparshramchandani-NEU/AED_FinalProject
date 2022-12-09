@@ -13,7 +13,7 @@ import Business.WorkQueue.WorkQueue;
  * @author HP
  */
 public class UserAccount {
-    public class UserAccount {
+    
      private String username;
     private String password;
     private Employee employee;
