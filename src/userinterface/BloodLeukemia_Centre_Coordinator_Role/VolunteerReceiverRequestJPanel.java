@@ -329,10 +329,20 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
 
         btnApprove.setBackground(new java.awt.Color(255, 164, 0));
         btnApprove.setText("Approve");
+        btnApprove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApproveActionPerformed(evt);
+            }
+        });
         add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 490, -1, -1));
 
         btnReject.setBackground(new java.awt.Color(255, 164, 0));
         btnReject.setText("Reject");
+        btnReject.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRejectActionPerformed(evt);
+            }
+        });
         add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 490, 80, -1));
 
         covidDiagnosedDateChooser.setBackground(new java.awt.Color(0, 0, 0));
@@ -399,6 +409,143 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStatusActionPerformed
 
+    private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        if( !txtStatus.getText().equals("New Request"))
+            {
+                JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Request can not be approved!</b></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+           
+                
+            //    JOptionPane.showMessageDialog(null,"Can Not Approve the Request!");
+            }
+        
+        else
+        {
+        
+        Patient patient = new Patient();
+        
+        try {
+            patient.getHLA().updateHLAlist(txtHLAType.getText());
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Patient's HLA Type can only be one of these HLA_A,HLA_B,HLA_C,HLA_DR,HLA_DBQ1</b></html>"));
+            return;
+        }
+        
+        patient.setName(txtName.getText());
+        patient.setContact(Long.parseLong(txtContactNumber.getText()));  
+        
+        patient.setReceiverID(txtUID.getText()); // UID, receiverID
+        patient.setName(txtName.getText()); // Name
+       
+       
+        
+        patient.setAge(Integer.parseInt(txtAge.getText())); // Age
+        patient.setGender(txtGender.getText()); // gender
+        
+        patient.setStreetAddress(txtStreetAddress.getText()); // streetAddress
+        patient.setCity(txtCity.getText()); // city
+        patient.setState(txtState.getText()); // state
+        patient.setZipCode(Integer.parseInt(txtZipCode.getText())); // zipCode
+        patient.setContact(Long.parseLong(txtContactNumber.getText())); // contact
+        patient.setEmailID(txtEmailID.getText()); // emailID
+        patient.setStatus("Centre Approved"); // status
+        patient.setLabConfirmation(true); //  labConfirmation
+        system.getPatientDirectory().addPatient(patient);
+      
+        
+        for(PatientRequest patientRequest: system.getPatientRequestDirectory().getPatientRequestList()){                      
+        
+            if(patientRequest.getReceiverID().equals(txtUID.getText())){
+            patientRequest.setStatus("Centre Approved");
+            dB4OUtil.storeSystem(system);
+            }
+        }
+       
+        Enterprise ent = null;
+        Organization org = null;
+        
+        for (Enterprise enterprise : network.getEnterprise_Directory().getEnterpriseList()) {
+            if (enterprise.getEnterpriseType().toString().equals("Legal")) {
+            
+                ent = enterprise;
+                System.out.println(enterprise);
+                break;
+            }
+        }
+        
+        
+       
+        for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
+            if(organization instanceof LegalOfficerOrganization) {
+                org = organization;
+                break;
+            }
+        }
+        
+        if (org != null) {
+            // WORK REQUEST
+        
+            WorkRequest request = new System_Coordinator_Test_WorkRequest();
+
+            request.setPatient(patient);
+            request.setActionDate(new Date());
+            request.setAssigned("Legal Department");
+            request.setSummary("Requested for BoneMarrow Reception");
+            request.setStatus("Assigned to Legal Department");
+
+            request.setUserAccount(userAccount);
+            org.getWorkQueue().getWorkRequestList().add(request);
+            System.out.println(org.getName());
+            userAccount.getWorkQueue().getWorkRequestList().add(request);
+            //user.addUserRequest(request);
+            
+            dB4OUtil.storeSystem(system);
+            populateRequestTable();
+            JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Request approved successfully!</b></html>"));
+            txtStatus.setText("Centre Approved");
+           
+            //JOptionPane.showMessageDialog(null,"Request Sent Successfully", "Info", JOptionPane.INFORMATION_MESSAGE);
+            
+        } else {
+        
+         JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
+         return;
+        }
+
+        
+        dB4OUtil.storeSystem(system);
+        populateRequestTable();
+        }
+      //  JOptionPane.showMessageDialog(null,"New patient has been added!");
+    }//GEN-LAST:event_btnApproveActionPerformed
+
+    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
+        // TODO add your handling code here:
+         if(!txtStatus.getText().equals("New Request"))
+                  {
+                      JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Request can not be rejected!</b></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+          
+                     // JOptionPane.showMessageDialog(null,"Can Not Reject the Request!");
+        }
+       else{
+        for(PatientRequest patientRequest: system.getPatientRequestDirectory().getPatientRequestList()){                      
+        
+            if(patientRequest.getName().equals(txtName.getText())){
+            txtStatus.setText("Rejected");
+            patientRequest.setStatus("Rejected");
+            }}
+        
+        dB4OUtil.storeSystem(system);   
+        populateRequestTable();
+        
+         JOptionPane.showMessageDialog(null, new JLabel("<html><b>Request has been rejected!</b></html>"));
+        
+        //JOptionPane.showMessageDialog(null,"Rejected the Patient's Request!");
+        }
+    }//GEN-LAST:event_btnRejectActionPerformed
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApprove;
