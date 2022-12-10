@@ -10,7 +10,7 @@ import java.util.Date;
  * @author HP
  */
 public class Employee {
-    private String name;
+     private String name;
     private int id;
     private long contactNumber;
     private Date dateOfBirth;
