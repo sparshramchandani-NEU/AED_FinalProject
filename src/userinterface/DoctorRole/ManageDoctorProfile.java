@@ -16,6 +16,11 @@ import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
 
+/**
+ *
+ * @author parth
+ */
+
 public class ManageDoctorProfile extends javax.swing.JPanel {
 
     /**
@@ -24,13 +29,13 @@ public class ManageDoctorProfile extends javax.swing.JPanel {
      
      private UserAccount userAccount;
      private Enterprise enterprise ;
-     private Bone_Marrow_Bank_Organization bmBankOrganization;
+     private DoctorOrganization doctorOrganization;
     
-    public ManageDoctorProfile(UserAccount userAccount, Bone_Marrow_Bank_Organization bmBankOrganization, Enterprise enterprise) {
+    public ManageDoctorProfile(UserAccount userAccount, DoctorOrganization doctorOrganization, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.bmBankOrganization = bmBankOrganization;
+        this.doctorOrganization = doctorOrganization;
         populateFields();
     }
 

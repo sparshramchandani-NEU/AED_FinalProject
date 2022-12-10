@@ -40,7 +40,7 @@ import static userinterface.GovernmentCoordinatorRole.NewDonorJPanel.emailValida
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class NewReceiverJPanel extends javax.swing.JPanel {
 
@@ -109,7 +109,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     
         txtUID.setEnabled(false);
         txtName.setEnabled(false);
-        dateDiagnosedDOB.setEnabled(false);
+        dateDOB.setEnabled(false);
         txtAge.setEnabled(false);
         txtEmailID.setEnabled(false);
         txtContactNumber.setEnabled(false);
@@ -176,7 +176,8 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         lblAddressDetails = new javax.swing.JLabel();
         txtHLAType = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
-        dateDiagnosedDOB = new org.netbeans.modules.form.InvalidComponent();
+        diagnosedDateChooser = new com.toedter.calendar.JDateChooser();
+        dateDOB = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1350, 718));
@@ -385,7 +386,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         lblCancerStatus.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         lblCancerStatus.setText("Cancer Status");
-        add(lblCancerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 150, -1));
+        add(lblCancerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 160, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 30, 250));
@@ -426,8 +427,13 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 640, 70, 30));
 
-        dateDiagnosedDOB.null;
-        add(dateDiagnosedDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 560, 180, 30));
+        diagnosedDateChooser.setBackground(new java.awt.Color(255, 255, 255));
+        diagnosedDateChooser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(diagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, 180, -1));
+
+        dateDOB.setBackground(new java.awt.Color(255, 255, 255));
+        dateDOB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(dateDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -483,9 +489,9 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             diagnosedDateChooser.setBorder(BorderFactory.createLineBorder(Color.RED));
             diagnosedDateChooser.setForeground(Color.red);
         }
-        if (dateDiagnosedDOB.getDate() == null ) {
-            dateDiagnosedDOB.setBorder(BorderFactory.createLineBorder(Color.RED));
-            dateDiagnosedDOB.setForeground(Color.red);
+        if (dateDOB.getDate() == null ) {
+            dateDOB.setBorder(BorderFactory.createLineBorder(Color.RED));
+            dateDOB.setForeground(Color.red);
         }
          if (txtAge.getText().isEmpty()) {
             txtAge.setBorder(BorderFactory.createLineBorder(Color.RED));
@@ -497,7 +503,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         //
         if (    txtName.getText().isEmpty() || txtEmailID.getText().isEmpty() || txtCity.getText().isEmpty() ||txtContactNumber.getText().isEmpty() ||
                 txtZipCode.getText().isEmpty() || txtStreetAddress.getText().isEmpty() || txtUID.getText().isEmpty() ||
-                dateDiagnosedDOB.getDate() == null || diagnosedDateChooser.getDate() == null || txtAge.getText().isEmpty() ||
+                dateDOB.getDate() == null || diagnosedDateChooser.getDate() == null || txtAge.getText().isEmpty() ||
                 String.valueOf(cmbGender.getSelectedItem()).equals("") || 
                 String.valueOf(txtHLAType.getText()).equals("") || 
                 String.valueOf(cmbState.getSelectedItem()).equals("") ||
@@ -585,7 +591,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         
         patientrequest.setReceiverID(txtUID.getText()); //UID, receiverID  
         patientrequest.setName(txtName.getText()); // Name
-        patientrequest.setDob(dateDiagnosedDOB.getDate()); // DOB 
+        patientrequest.setDob(dateDOB.getDate()); // DOB 
         patientrequest.setCancerDiagnosedDate(diagnosedDateChooser.getDate()); // cancerDiagnosedDate            
         patientrequest.setAge(Integer.parseInt(txtAge.getText())); // Age
         patientrequest.setGender((String)cmbGender.getSelectedItem()); // gender
@@ -658,7 +664,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         // TODO add your handling code here:
-         Date dob = dateDiagnosedDOB.getDate();
+         Date dob = dateDOB.getDate();
         System.out.println(dob.getYear());
         txtAge.setText((String.valueOf(new Date().getYear()-dob.getYear())));
         
@@ -666,7 +672,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
     private void txtAgeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtAgeMouseClicked
         // TODO add your handling code here:
-        Date dob = dateDiagnosedDOB.getDate();
+        Date dob = dateDOB.getDate();
         System.out.println(dob.getYear());
         txtAge.setText((String.valueOf(new Date().getYear()-dob.getYear())));
         
@@ -712,7 +718,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
        // buttonYes.resetKeyboardActions();
         txtUID.setEnabled(true);
         txtName.setEnabled(true);
-        dateDiagnosedDOB.setEnabled(true);
+        dateDOB.setEnabled(true);
         txtAge.setEnabled(false);
         txtEmailID.setEnabled(true);
         txtContactNumber.setEnabled(true);
@@ -742,7 +748,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         cmbState.setSelectedItem("");
         
 
-        dateDiagnosedDOB.setCalendar(null);
+        dateDOB.setCalendar(null);
         diagnosedDateChooser.setCalendar(null);
        
         // ButtonGroup radioGroup1 = new ButtonGroup();       
@@ -801,7 +807,8 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmit;
     private javax.swing.JComboBox cmbGender;
     private javax.swing.JComboBox cmbState;
-    private org.netbeans.modules.form.InvalidComponent dateDiagnosedDOB;
+    private com.toedter.calendar.JDateChooser dateDOB;
+    private com.toedter.calendar.JDateChooser diagnosedDateChooser;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;

@@ -30,7 +30,7 @@ import org.jfree.data.general.DefaultPieDataset;
 
 /*
  *
- * @author nitin
+ * @author parth
  */
 public class StatisticsJPanel extends javax.swing.JPanel {
 

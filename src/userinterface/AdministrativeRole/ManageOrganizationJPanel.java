@@ -30,6 +30,11 @@ import static Business.Enterprise.Enterprise.EnterpriseType.BloodCancerCentre;
 import static Business.Enterprise.Enterprise.EnterpriseType.BoneMarrowBank;
 import Magic.Design.MyJButton;
 
+/**
+ *
+ * @author parth
+ */
+
 
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 

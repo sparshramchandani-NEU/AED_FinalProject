@@ -15,6 +15,11 @@ import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
 
+/**
+ *
+ * @author parth
+ */
+
 public class ManageBoneMarrowBankCoordinatorProfile extends javax.swing.JPanel {
 
     /**

@@ -12,10 +12,17 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Bone_Marrow_Bank_Organization;
+import Business.Organization.LegalOfficerOrganization;
 import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+
+
+/**
+ *
+ * @author parth
+ */
 
 public class ManageLegalOfficerProfile extends javax.swing.JPanel {
 
@@ -25,13 +32,13 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
      
      private UserAccount userAccount;
      private Enterprise enterprise ;
-     private Bone_Marrow_Bank_Organization bmBankOrganization;
+     private LegalOfficerOrganization legalofficerorganizationn;
     
-    public ManageLegalOfficerProfile(UserAccount userAccount, Bone_Marrow_Bank_Organization bmBankOrganization, Enterprise enterprise) {
+    public ManageLegalOfficerProfile(UserAccount userAccount, LegalOfficerOrganization legalofficerorganization, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.bmBankOrganization = bmBankOrganization;
+        this.legalofficerorganizationn = legalofficerorganizationn;
         populateFields();
     }
 

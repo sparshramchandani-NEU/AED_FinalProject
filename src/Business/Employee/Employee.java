@@ -12,8 +12,8 @@ import java.util.Date;
 public class Employee {
      private String name;
     private int id;
-    private String contactNumber;
-    private String dateOfBirth;
+    private long contactNumber;
+    private Date dateOfBirth;
     private String gender;
     private String city;
     private String state;
@@ -40,19 +40,19 @@ public class Employee {
         return name;
     }
 
-    public String getContactNumber() {
+    public long getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(String contactNumber) {
+    public void setContactNumber(long contactNumber) {
         this.contactNumber = contactNumber;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

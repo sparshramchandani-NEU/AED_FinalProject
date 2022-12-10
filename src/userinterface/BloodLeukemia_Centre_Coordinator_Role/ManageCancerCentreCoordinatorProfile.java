@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class ManageCancerCentreCoordinatorProfile extends javax.swing.JPanel {
 

@@ -13,10 +13,17 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Bone_Marrow_Bank_Organization;
+import Business.Organization.SystemCoordinatorOrganization;
 import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+
+
+/**
+ *
+ * @author parth
+ */
 
 public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
 
@@ -26,13 +33,13 @@ public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
      
      private UserAccount userAccount;
      private Enterprise enterprise ;
-     private Bone_Marrow_Bank_Organization bmBankOrganization;
+     private SystemCoordinatorOrganization systOrganization;
     
-    public ManageSystemCoordinatorProfile(UserAccount userAccount, Bone_Marrow_Bank_Organization bmBankOrganization, Enterprise enterprise) {
+    public ManageSystemCoordinatorProfile(UserAccount userAccount, SystemCoordinatorOrganization systOrganization, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.bmBankOrganization = bmBankOrganization;
+        this.systOrganization = systOrganization;
         populateFields();
     }
 

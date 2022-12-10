@@ -40,7 +40,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class CreateDonorJPanel extends javax.swing.JPanel {
 
@@ -329,7 +329,7 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
         txtUID.setText( String.valueOf(tblDonorDetails.getValueAt(selectedRow, 0)));
         txtBloodGroup.setText( String.valueOf(tblDonorDetails.getValueAt(selectedRow, 3)));
         
-        btnCreate.setEnabled(true);
+        btnCreateDonor.setEnabled(true);
         }
     }//GEN-LAST:event_tblDonorDetailsMousePressed
 

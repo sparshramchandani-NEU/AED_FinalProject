@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
 
@@ -117,6 +117,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         lblAddressDetails = new javax.swing.JLabel();
         btnApprove = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
+        dobDateField = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1450, 830));
@@ -356,6 +357,29 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 230, 80, -1));
+
+        dobDateField.setBackground(new java.awt.Color(0, 0, 0));
+        dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dobDateField.setForeground(new java.awt.Color(255, 255, 255));
+        dobDateField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                dobDateFieldFocusLost(evt);
+            }
+        });
+        dobDateField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dobDateFieldMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                dobDateFieldMousePressed(evt);
+            }
+        });
+        dobDateField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dobDateFielduDobKeyTyped(evt);
+            }
+        });
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 170, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private ImageIcon setPicturebyte(byte[] byteArrayImage){
@@ -386,7 +410,6 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
 
     private void dobDateFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dobDateFieldFocusLost
         // TODO add your handling code here:
-
     }//GEN-LAST:event_dobDateFieldFocusLost
 
     private void dobDateFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldMouseExited
@@ -629,6 +652,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnReject;
+    private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAddressDetails;

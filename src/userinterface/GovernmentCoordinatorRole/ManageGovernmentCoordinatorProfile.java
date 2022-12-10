@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package userinterface.GovernmentCoordinatorRole;
 
 import userinterface.BoneMarrowBankCoordinatorRole.*;
@@ -11,10 +13,16 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Bone_Marrow_Bank_Organization;
+import Business.Organization.GovernmentOrganization;
 import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+
+/**
+ *
+ * @author parth
+ */
 
 public class ManageGovernmentCoordinatorProfile extends javax.swing.JPanel {
 
@@ -24,13 +32,12 @@ public class ManageGovernmentCoordinatorProfile extends javax.swing.JPanel {
      
      private UserAccount userAccount;
      private Enterprise enterprise ;
-     private Bone_Marrow_Bank_Organization bmBankOrganization;
-    
-    public ManageGovernmentCoordinatorProfile(UserAccount userAccount, Bone_Marrow_Bank_Organization bmBankOrganization, Enterprise enterprise) {
+private GovernmentOrganization govtOrganization;    
+    public ManageGovernmentCoordinatorProfile(UserAccount userAccount, GovernmentOrganization govtOrganization, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.bmBankOrganization = bmBankOrganization;
+        this.govtOrganization = govtOrganization;
         populateFields();
     }
 

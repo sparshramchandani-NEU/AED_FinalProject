@@ -10,7 +10,7 @@ import Business.Organization.OrganizationDirectory;
  *
  * @author HP
  */
-public class Enterprise extends Organization{
+public abstract class Enterprise extends Organization{
       private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
     private long contact;
