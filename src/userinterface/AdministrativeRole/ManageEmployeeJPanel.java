@@ -23,9 +23,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  *
- * @author saiku
+ * @author Payal
  */
 public class ManageEmployeeJPanel extends javax.swing.JPanel {
 

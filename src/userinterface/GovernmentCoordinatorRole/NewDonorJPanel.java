@@ -251,7 +251,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
 
         lblDate.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblDate.setText("DOB");
-        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
+        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblAge.setText("Age");
@@ -370,35 +370,50 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(btnAddPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 320, 110, 30));
 
         btnYesQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ2.setText("Yes");
+        btnYesQ2.setText("No");
         add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
 
         btnNoQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ2.setText("No");
+        btnNoQ2.setText("Yes");
         add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
 
         btnNoQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ1.setText("No");
+        btnNoQ1.setText("Yes");
+        btnNoQ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNoQ1ActionPerformed(evt);
+            }
+        });
         add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
 
         btnYesQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ1.setText("Yes");
+        btnYesQ1.setText("No");
         add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
 
         btnNoQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ3.setText("No");
+        btnNoQ3.setText("Yes");
+        btnNoQ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNoQ3ActionPerformed(evt);
+            }
+        });
         add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
 
         btnYesQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ3.setText("Yes");
+        btnYesQ3.setText("No");
         add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
 
         btnNoQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ4.setText("No");
+        btnNoQ4.setText("Yes");
+        btnNoQ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNoQ4ActionPerformed(evt);
+            }
+        });
         add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
 
         btnYesQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ4.setText("Yes");
+        btnYesQ4.setText("No");
         add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
@@ -486,6 +501,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
 
         dobDateField.setBackground(new java.awt.Color(255, 255, 255));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dobDateField.setDateFormatString("DD/MM/YYYY");
         dobDateField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 dobDateFieldFocusLost(evt);
@@ -1008,6 +1024,18 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
 
             */
     }//GEN-LAST:event_dobDateFielduDobKeyTyped
+
+    private void btnNoQ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoQ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNoQ1ActionPerformed
+
+    private void btnNoQ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoQ3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNoQ3ActionPerformed
+
+    private void btnNoQ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoQ4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNoQ4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
