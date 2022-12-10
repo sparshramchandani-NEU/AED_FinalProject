@@ -45,7 +45,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class NewDonorJPanel extends javax.swing.JPanel {
 

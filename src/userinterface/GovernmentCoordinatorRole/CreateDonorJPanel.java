@@ -40,7 +40,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class CreateDonorJPanel extends javax.swing.JPanel {
 

@@ -19,6 +19,12 @@ import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
 
+
+/**
+ *
+ * @author parth
+ */
+
 public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
 
     /**

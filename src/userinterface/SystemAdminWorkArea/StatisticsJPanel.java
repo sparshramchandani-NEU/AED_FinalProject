@@ -28,9 +28,9 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
 
-/*
+/**
  *
- * @author nitin
+ * @author parth
  */
 public class StatisticsJPanel extends javax.swing.JPanel {
 

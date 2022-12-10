@@ -31,7 +31,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class CreatePatientJPanel extends javax.swing.JPanel {
     private  EcoSystem system;

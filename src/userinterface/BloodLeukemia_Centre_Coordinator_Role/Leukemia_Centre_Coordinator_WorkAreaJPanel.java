@@ -35,7 +35,7 @@ import static javax.swing.SwingUtilities.getWindowAncestor;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class Leukemia_Centre_Coordinator_WorkAreaJPanel extends javax.swing.JPanel {
 
