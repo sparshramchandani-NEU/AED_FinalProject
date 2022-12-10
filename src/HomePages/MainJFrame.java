@@ -107,6 +107,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setAutoscrolls(true);
 
+        btnLogin.setBackground(new java.awt.Color(255, 164, 0));
         btnLogin.setText("Login");
         btnLogin.setBorder(new javax.swing.border.MatteBorder(null));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +164,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        btnLogout.setBackground(new java.awt.Color(255, 164, 0));
         btnLogout.setText("Logout");
         btnLogout.setBorder(new javax.swing.border.MatteBorder(null));
         btnLogout.setEnabled(false);
