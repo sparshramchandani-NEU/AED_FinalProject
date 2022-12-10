@@ -239,7 +239,9 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         add(btnSendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 660, 100, 30));
 
         txtTo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+
         txtTo.setText("sparshramchandani7021@gmail.com");
+
         txtTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtToActionPerformed(evt);
@@ -248,7 +250,9 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         add(txtTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 320, -1));
 
         txtFrom.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+
         txtFrom.setText("sparsh95473@gmail.com");
+
         txtFrom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFromActionPerformed(evt);
