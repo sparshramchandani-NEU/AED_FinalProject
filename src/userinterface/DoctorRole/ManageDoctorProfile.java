@@ -16,6 +16,13 @@ import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
 
+
+/**
+ *
+ * @author Payal
+ */
+
+
 public class ManageDoctorProfile extends javax.swing.JPanel {
 
     /**

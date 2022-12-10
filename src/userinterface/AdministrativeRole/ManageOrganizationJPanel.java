@@ -31,6 +31,12 @@ import static Business.Enterprise.Enterprise.EnterpriseType.BoneMarrowBank;
 import Magic.Design.MyJButton;
 
 
+/**
+ *
+ * @author Payal
+ */
+
+
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
     private OrganizationDirectory directory;
