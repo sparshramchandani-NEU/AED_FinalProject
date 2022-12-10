@@ -212,9 +212,9 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         lblInjuryConfirmation = new javax.swing.JLabel();
-        txtHLAType = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         dobDateField = new com.toedter.calendar.JDateChooser();
+        txtHLAType = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -481,9 +481,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblInjuryConfirmation.setText("By Registering to join this cause, you are confirming that");
         add(lblInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
 
-        txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 330, 180, -1));
-
         btnBack.setBackground(new java.awt.Color(255, 164, 0));
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnBack.setText("Back");
@@ -518,6 +515,14 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             }
         });
         add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
+
+        txtHLAType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "HLA_A", "HLA_B", "HLA_C", "HLA_DR", "HLA_DBQ1" }));
+        txtHLAType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHLATypeActionPerformed(evt);
+            }
+        });
+        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 330, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -538,7 +543,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             cmbGender.setBorder(BorderFactory.createLineBorder(Color.RED));
             cmbGender.setForeground(Color.red);
         }
-        if ( txtHLAType.getText().equals("") ){
+        if ( txtHLAType.getSelectedItem().equals("Select") ){
             txtHLAType.setBorder(BorderFactory.createLineBorder(Color.RED));
             txtHLAType.setForeground(Color.red);
         }
@@ -596,7 +601,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 dobDateField.getDate() == null      || 
                 txtAge.getText().isEmpty()         ||
                 String.valueOf(cmbGender.getSelectedItem()).equals("") || 
-                String.valueOf(txtHLAType.getText()).equals("") || 
+                String.valueOf(txtHLAType.getSelectedItem()).equals("") || 
                 String.valueOf(cmbState.getSelectedItem()).equals(""))
             { 
             JOptionPane.showMessageDialog(null,new JLabel(  "<html><b>All fields are mandatory!</b></html>") , "Error", JOptionPane.ERROR_MESSAGE);
@@ -657,7 +662,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
           
           else{
             try {
-                donorRequest.getHLA().updateHLAlist(txtHLAType.getText());
+                donorRequest.getHLA().updateHLAlist(String.valueOf(txtHLAType.getSelectedItem()));
             }
             catch (Exception e) {
                 JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Patient's HLA Type can only be one of these HLA_A,HLA_B,HLA_C,HLA_DR,HLA_DBQ1</b></html>"));
@@ -806,7 +811,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         txtStreetAddress.setText("");
         txtCity.setText("");
         txtZipCode.setText("");
-        txtHLAType.setText("");
+        txtHLAType.setSelectedItem("Select");
         
         cmbGender.setSelectedItem("");
         cmbState.setSelectedItem("");
@@ -972,6 +977,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
         NewDonorJPanel.super.setVisible(false);
+        
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtUIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUIDActionPerformed
@@ -1027,6 +1033,10 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         // TODO add your handling code here:
     }//GEN-LAST:event_btnYesQ4ActionPerformed
 
+    private void txtHLATypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHLATypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHLATypeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddPhoto;
@@ -1073,7 +1083,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContactNumber;
     private javax.swing.JTextField txtEmailID;
-    private javax.swing.JTextField txtHLAType;
+    private javax.swing.JComboBox<String> txtHLAType;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtStreetAddress;
     private javax.swing.JTextField txtUID;
