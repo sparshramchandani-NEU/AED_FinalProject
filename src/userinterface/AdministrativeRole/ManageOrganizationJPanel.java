@@ -260,7 +260,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         lblSelectOrganizationType.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblSelectOrganizationType.setText("Select Organization Type ");
-        panel1.add(lblSelectOrganizationType, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 250, -1));
+        panel1.add(lblSelectOrganizationType, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 220, -1));
 
         btnAddOrganization.setBackground(new java.awt.Color(255, 164, 0));
         btnAddOrganization.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N

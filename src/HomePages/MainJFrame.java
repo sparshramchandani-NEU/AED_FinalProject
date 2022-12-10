@@ -76,7 +76,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         imgHope.setBackground(new java.awt.Color(255, 255, 255));
         imgHope.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgHope.setIcon(new javax.swing.ImageIcon("C:\\Users\\Payal\\Desktop\\mainribbon.jpg")); // NOI18N
+        imgHope.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePages/background.jpg"))); // NOI18N
         imgHope.setPreferredSize(new java.awt.Dimension(789, 744));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -111,7 +111,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imgHope, javax.swing.GroupLayout.DEFAULT_SIZE, 787, Short.MAX_VALUE)
+                    .addComponent(imgHope, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -205,7 +205,7 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         lblLogo.setBackground(new java.awt.Color(255, 255, 255));
-        lblLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Payal\\Downloads\\ribbon.jpg")); // NOI18N
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePages/ribbon.jpg"))); // NOI18N
         lblLogo.setMaximumSize(new java.awt.Dimension(65, 65));
         lblLogo.setMinimumSize(new java.awt.Dimension(65, 65));
         lblLogo.setPreferredSize(new java.awt.Dimension(65, 65));
@@ -409,6 +409,9 @@ public class MainJFrame extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

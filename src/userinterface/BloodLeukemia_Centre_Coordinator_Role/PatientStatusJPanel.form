@@ -162,7 +162,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="                                                                         Patient&apos;s Status"/>
+            <Property name="text" type="java.lang.String" value="                                                                         Patients&apos; Status"/>
           </Properties>
         </Component>
       </SubComponents>

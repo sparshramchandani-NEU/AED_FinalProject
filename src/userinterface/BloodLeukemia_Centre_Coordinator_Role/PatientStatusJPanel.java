@@ -139,7 +139,7 @@ public class PatientStatusJPanel extends javax.swing.JPanel {
         lblPatientStatus.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblPatientStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblPatientStatus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblPatientStatus.setText("                                                                         Patient's Status");
+        lblPatientStatus.setText("                                                                         Patients' Status");
         jPanel3.add(lblPatientStatus);
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1800, -1));

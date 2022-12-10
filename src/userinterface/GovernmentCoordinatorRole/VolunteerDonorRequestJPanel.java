@@ -156,7 +156,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 780, 170));
 
         lblUID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblUID.setText("Donor ID");
+        lblUID.setText("UID");
         add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, 30));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N

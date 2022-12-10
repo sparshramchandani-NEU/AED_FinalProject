@@ -147,7 +147,7 @@ public class ManageBoneMarrowBankCoordinatorProfile extends javax.swing.JPanel {
 
         lblSpecialization.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblSpecialization.setText("Specialization:");
-        add(lblSpecialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        add(lblSpecialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed

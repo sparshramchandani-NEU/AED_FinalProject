@@ -238,7 +238,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         lblRegNum.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblRegNum.setText("Donor ID");
+        lblRegNum.setText("Reg Num");
         add(lblRegNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -251,7 +251,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
 
         lblDate.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblDate.setText("DOB");
-        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
+        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblAge.setText("Age");
@@ -370,36 +370,46 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(btnAddPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 320, 110, 30));
 
         btnYesQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ2.setText("Yes");
-        add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
+        btnYesQ2.setText("No");
+        add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
 
         btnNoQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ2.setText("No");
-        add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
+        btnNoQ2.setText("Yes");
+        add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
 
         btnNoQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ1.setText("No");
-        add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
+        btnNoQ1.setText("Yes");
+        add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
 
         btnYesQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ1.setText("Yes");
-        add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
+        btnYesQ1.setText("No");
+        btnYesQ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnYesQ1ActionPerformed(evt);
+            }
+        });
+        add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
 
         btnNoQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ3.setText("No");
-        add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
+        btnNoQ3.setText("Yes");
+        add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
 
         btnYesQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ3.setText("Yes");
-        add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
+        btnYesQ3.setText("No");
+        add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
 
         btnNoQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ4.setText("No");
-        add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
+        btnNoQ4.setText("Yes");
+        add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
 
         btnYesQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ4.setText("Yes");
-        add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
+        btnYesQ4.setText("No");
+        btnYesQ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnYesQ4ActionPerformed(evt);
+            }
+        });
+        add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setForeground(new java.awt.Color(255, 164, 0));
@@ -1008,6 +1018,14 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
 
             */
     }//GEN-LAST:event_dobDateFielduDobKeyTyped
+
+    private void btnYesQ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYesQ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnYesQ1ActionPerformed
+
+    private void btnYesQ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYesQ4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnYesQ4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
