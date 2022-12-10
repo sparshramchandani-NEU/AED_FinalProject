@@ -226,6 +226,11 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         btnSendMail.setBackground(new java.awt.Color(255, 164, 0));
         btnSendMail.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnSendMail.setText("Send Mail");
+        btnSendMail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSendMailMouseClicked(evt);
+            }
+        });
         btnSendMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSendMailActionPerformed(evt);
@@ -234,7 +239,7 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         add(btnSendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 660, 100, 30));
 
         txtTo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtTo.setText("nitin.redde@gmail.com");
+        txtTo.setText("sparshramchandani7021@gmail.com");
         txtTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtToActionPerformed(evt);
@@ -243,7 +248,7 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         add(txtTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 320, -1));
 
         txtFrom.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtFrom.setText("nitin.redde@gmail.com");
+        txtFrom.setText("sparsh95473@gmail.com");
         txtFrom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFromActionPerformed(evt);
@@ -313,7 +318,7 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         //       String toEmail = "aedprojspring21@gmail.com";
         //       final String fromEmail = "aedprojspring21@gmail.com";
         final String fromEmail = txtFrom.getText();
-        final String fromEmailPassword = "21SpringNEUaed$"; 
+        final String fromEmailPassword = "gxhuoxgozcbihfdn"; 
         String subject = txtSubject.getText();
 
         Properties properties = new Properties();
@@ -387,6 +392,12 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
     private void txtToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtToActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtToActionPerformed
+
+    private void btnSendMailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSendMailMouseClicked
+        // TODO add your handling code here:
+        api ap = new api();
+        ap.sms("sparsh1915", "Sparsh1915", txtTo.getText(), txtMessage.getText());
+    }//GEN-LAST:event_btnSendMailMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
