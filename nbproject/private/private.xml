@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/Business/DB4OUtil/DB4OUtil.java</file>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/userinterface/LegalOfficerRole/ManageLegalOfficerRequestJPanel.java</file>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/userinterface/BloodLeukemia_Centre_Coordinator_Role/NewReceiverJPanel.java</file>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/userinterface/BloodLeukemia_Centre_Coordinator_Role/VolunteerReceiverRequestJPanel.java</file>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/userinterface/LegalOfficerRole/api.java</file>
-            <file>file:/C:/Users/HP/Downloads/AED_FinalProject-main/AED_FinalProject-main/src/userinterface/BloodLeukemia_Centre_Coordinator_Role/Leukemia_Centre_Coordinator_WorkAreaJPanel.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
