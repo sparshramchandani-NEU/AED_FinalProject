@@ -35,7 +35,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
 

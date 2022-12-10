@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nitin
+ * @author parth
  */
 public class DonorStatusJPanel extends javax.swing.JPanel {
 
