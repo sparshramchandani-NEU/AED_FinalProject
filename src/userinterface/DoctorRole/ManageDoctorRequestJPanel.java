@@ -28,7 +28,9 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
+
  * @author Payal
+
  */
 public class ManageDoctorRequestJPanel extends javax.swing.JPanel {
 

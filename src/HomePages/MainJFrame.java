@@ -18,7 +18,9 @@ import javax.swing.JPanel;
 
 /**
  *
+
  * @author Payal
+
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -104,7 +106,9 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setAutoscrolls(true);
 
+
         btnLogin.setBackground(new java.awt.Color(255, 164, 0));
+
         btnLogin.setText("Login");
         btnLogin.setBorder(new javax.swing.border.MatteBorder(null));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +128,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
+
         btnDonorRegistration.setBackground(new java.awt.Color(255, 164, 0));
+
         btnDonorRegistration.setText("Register as Donor");
         btnDonorRegistration.setBorder(new javax.swing.border.MatteBorder(null));
         btnDonorRegistration.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +139,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+
         btnPatientRegistration.setBackground(new java.awt.Color(255, 164, 0));
+
         btnPatientRegistration.setText("Register as Patient");
         btnPatientRegistration.setBorder(new javax.swing.border.MatteBorder(null));
         btnPatientRegistration.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +170,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnPatientRegistration, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+
         btnLogout.setBackground(new java.awt.Color(255, 164, 0));
+
         btnLogout.setText("Logout");
         btnLogout.setBorder(new javax.swing.border.MatteBorder(null));
         btnLogout.setEnabled(false);
@@ -172,7 +182,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+
         lblLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Payal\\Downloads\\ribbon.jpg")); // NOI18N
+
         lblLogo.setMaximumSize(new java.awt.Dimension(65, 65));
         lblLogo.setMinimumSize(new java.awt.Dimension(65, 65));
         lblLogo.setPreferredSize(new java.awt.Dimension(65, 65));
@@ -183,6 +195,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
+
                 .addGap(10, 10, 10)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,12 +208,15 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(lblPassword)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
+
                 .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(lblUsername)
@@ -215,6 +231,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
+
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(257, Short.MAX_VALUE))
         );

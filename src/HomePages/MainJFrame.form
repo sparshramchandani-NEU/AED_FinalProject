@@ -133,6 +133,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
+
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -148,6 +149,9 @@
                               <Component id="lblPassword" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="txtPassword" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
                               <Component id="btnLogin" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+
+                      
+
                           </Group>
                           <EmptySpace pref="22" max="32767" attributes="0"/>
                       </Group>
@@ -157,6 +161,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
+
                           <Component id="lblLogo" min="-2" pref="132" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Component id="lblUsername" min="-2" max="-2" attributes="0"/>
@@ -171,6 +176,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnLogout" min="-2" pref="29" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+
+                          
+
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="257" max="32767" attributes="0"/>
                       </Group>
@@ -180,9 +188,11 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="btnLogin">
                   <Properties>
+
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="a4" red="ff" type="rgb"/>
                     </Property>
+
                     <Property name="text" type="java.lang.String" value="Login"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -257,9 +267,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JButton" name="btnDonorRegistration">
                       <Properties>
+
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="a4" red="ff" type="rgb"/>
                         </Property>
+
                         <Property name="text" type="java.lang.String" value="Register as Donor"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -273,9 +285,11 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="btnPatientRegistration">
                       <Properties>
+
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="a4" red="ff" type="rgb"/>
                         </Property>
+
                         <Property name="text" type="java.lang.String" value="Register as Patient"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -294,6 +308,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="a4" red="ff" type="rgb"/>
                     </Property>
+
                     <Property name="text" type="java.lang.String" value="Logout"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -309,7 +324,9 @@
                 <Component class="javax.swing.JLabel" name="lblLogo">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+
                       <Image iconType="2" name="C:\Users\Payal\Downloads\ribbon.jpg"/>
+
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[65, 65]"/>
