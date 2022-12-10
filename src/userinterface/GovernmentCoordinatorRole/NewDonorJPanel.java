@@ -251,7 +251,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
 
         lblDate.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblDate.setText("DOB");
-        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
+        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblAge.setText("Age");
