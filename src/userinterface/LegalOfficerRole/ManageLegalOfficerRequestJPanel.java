@@ -324,7 +324,7 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
         //       String toEmail = "aedprojspring21@gmail.com";
         //       final String fromEmail = "aedprojspring21@gmail.com";
         final String fromEmail = txtFrom.getText();
-        final String fromEmailPassword = "gxhuoxgozcbihfdn"; 
+        final String fromEmailPassword = "hphuaviovfcertov"; 
         String subject = txtSubject.getText();
 
         Properties properties = new Properties();
@@ -401,8 +401,8 @@ public class ManageLegalOfficerRequestJPanel extends javax.swing.JPanel {
 
     private void btnSendMailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSendMailMouseClicked
         // TODO add your handling code here:
-        api ap = new api();
-        ap.sms("sparsh1915", "Sparsh1915", txtTo.getText(), txtMessage.getText());
+//        api ap = new api();
+//        ap.sms("sparsh1915", "Sparsh1915", txtTo.getText(), txtMessage.getText());
     }//GEN-LAST:event_btnSendMailMouseClicked
 
 
