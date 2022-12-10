@@ -28,9 +28,7 @@ import static javax.swing.SwingUtilities.getWindowAncestor;
 
 /**
  *
-
  * @author Payal
-
  */
 public class LegalOfficerWorkAreaJPanel extends javax.swing.JPanel {
 

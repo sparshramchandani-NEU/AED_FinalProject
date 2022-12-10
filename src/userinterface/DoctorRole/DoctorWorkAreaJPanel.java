@@ -34,9 +34,7 @@ import static javax.swing.SwingUtilities.getWindowAncestor;
 
 /**
  *
-
  * @author Payal
-
  */
 public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
