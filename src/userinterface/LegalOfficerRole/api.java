@@ -10,7 +10,7 @@ import java.io.*;
 
 /**
  *
- * @author parth
+ * @author HP
  */
 public class api {
     public void sms (String username, String password, String to, String message){

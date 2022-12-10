@@ -21,8 +21,9 @@ import Magic.Design.MyJLabel;
 
 /**
  *
- * @author parth
+ * @author Payal
  */
+
 
 public class ManageLegalOfficerProfile extends javax.swing.JPanel {
 

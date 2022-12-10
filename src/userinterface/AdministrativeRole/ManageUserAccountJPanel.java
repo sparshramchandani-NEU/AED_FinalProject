@@ -26,7 +26,9 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author parth
+
+ * @author Payal
+
  */
 public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
