@@ -228,7 +228,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         add(lblZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 570, -1, -1));
 
         lblUID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblUID.setText("UID");
+        lblUID.setText("Patient ID");
         add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, -1, -1));
 
         txtZipCode.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N

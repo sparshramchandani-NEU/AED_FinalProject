@@ -132,7 +132,7 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblUID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblUID.setText("UID");
+        lblUID.setText("Patient ID");
         add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -204,14 +204,14 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
 
         lblCity.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblCity.setText("City");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
+        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, -1, -1));
 
         txtCity.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 180, -1));
 
         lblState.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblState.setText("State");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 680, -1, -1));
+        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 670, -1, -1));
 
         txtState.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtState.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +223,7 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
 
         lblZipCode.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblZipCode.setText("ZipCode");
-        add(lblZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 740, -1, -1));
+        add(lblZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 740, -1, -1));
 
         txtZipCode.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 730, 180, -1));
@@ -261,7 +261,7 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, -1));
 
         txtLabConfirmation.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtLabConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 660, 210, -1));
+        add(txtLabConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 660, 210, -1));
 
         tblRequest.setBackground(new java.awt.Color(0, 0, 0));
         tblRequest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N

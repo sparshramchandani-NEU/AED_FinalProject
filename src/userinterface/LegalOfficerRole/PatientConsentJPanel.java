@@ -146,7 +146,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnApproveActionPerformed(evt);
             }
         });
-        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, 100, 40));
+        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 590, 100, 40));
 
         btnReject.setBackground(new java.awt.Color(255, 164, 0));
         btnReject.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -156,7 +156,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnRejectActionPerformed(evt);
             }
         });
-        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 100, 40));
+        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 590, 90, 40));
 
         btnDisplayConsentForm.setBackground(new java.awt.Color(255, 164, 0));
         btnDisplayConsentForm.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N

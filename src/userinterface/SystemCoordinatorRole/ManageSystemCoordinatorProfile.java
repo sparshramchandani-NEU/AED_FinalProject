@@ -143,7 +143,7 @@ public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 324, -1, -1));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
 
         cmbGender.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cmbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));

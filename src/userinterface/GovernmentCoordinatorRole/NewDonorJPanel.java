@@ -238,7 +238,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         lblRegNum.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblRegNum.setText("Reg Num");
+        lblRegNum.setText("Donor ID");
         add(lblRegNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
