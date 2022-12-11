@@ -477,15 +477,15 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblInjuryConfirmation.setText("By Registering to join this cause, you are confirming that");
         add(lblInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(255, 164, 0));
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/GovernmentCoordinatorRole/backarrow1.png"))); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, 80, 30));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 670, 80, 70));
 
         dobDateField.setBackground(new java.awt.Color(255, 255, 255));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

@@ -48,10 +48,11 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
         cmbGender.removeAllItems();
         cmbGender.addItem("Male");
         cmbGender.addItem("Female");
+//        txtAddress.setText(userAccount.getEmployee().getAddress());
         txtAddress.setText(userAccount.getEmployee().getAddress());
         txtCity.setText(userAccount.getEmployee().getCity());
         txtContact.setText(String.valueOf(userAccount.getEmployee().getContactNumber()));
-        txtDOB.setText(String.valueOf(userAccount.getEmployee().getDateOfBirth()));
+        txtDOB.setDate(userAccount.getEmployee().getDateOfBirth());
         txtName.setText(userAccount.getEmployee().getName());
         txtSpecialization.setText(userAccount.getEmployee().getSpecialization());
         txtState.setText(userAccount.getEmployee().getState());
@@ -79,10 +80,10 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
         txtCity = new javax.swing.JTextField();
         txtState = new javax.swing.JTextField();
         txtSpecialization = new javax.swing.JTextField();
-        txtDOB = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         cmbGender = new javax.swing.JComboBox();
         lblSpecialization = new javax.swing.JLabel();
+        txtDOB = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -133,11 +134,8 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
         txtSpecialization.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         add(txtSpecialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 146, -1));
 
-        txtDOB.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 232, 146, -1));
-
         btnSave.setBackground(new java.awt.Color(255, 164, 0));
-        btnSave.setText("Save");
+        btnSave.setText("Update");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
@@ -152,20 +150,94 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
         lblSpecialization.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblSpecialization.setText("Specialization:");
         add(lblSpecialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        txtDOB.setBackground(new java.awt.Color(255, 255, 255));
+        txtDOB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        txtDOB.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtDOBFocusLost(evt);
+            }
+        });
+        txtDOB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtDOBMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDOBMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                txtDOBagePop(evt);
+            }
+        });
+        txtDOB.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDOBuDobKeyTyped(evt);
+            }
+        });
+        add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         userAccount.getEmployee().setCity(txtCity.getText());
         userAccount.getEmployee().setContactNumber(Integer.parseInt(txtContact.getText()));
-        userAccount.getEmployee().setDateOfBirth(new Date(txtDOB.getText()));
+        userAccount.getEmployee().setDateOfBirth(txtDOB.getDate());
         userAccount.getEmployee().setGender((String) cmbGender.getSelectedItem());
         userAccount.getEmployee().setAddress(txtAddress.getText());
         userAccount.getEmployee().setState(txtCity.getText());
         userAccount.getEmployee().setSpecialization(txtSpecialization.getText());
         
         
+        
+        
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtDOBFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDOBFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDOBFocusLost
+
+    private void txtDOBMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDOBMouseExited
+        //    Date dob = dobDateField.getDate();
+        //       System.out.println(dob.getYear());
+        //    ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+    }//GEN-LAST:event_txtDOBMouseExited
+
+    private void txtDOBMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDOBMousePressed
+
+    }//GEN-LAST:event_txtDOBMousePressed
+
+    private void txtDOBagePop(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDOBagePop
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDOBagePop
+
+    private void txtDOBuDobKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDOBuDobKeyTyped
+        // TODO add your handling code here:
+        // System.out.println("date");
+        /*
+
+        Date dob = dobDateField.getDate();
+
+        LocalDate today = LocalDate.now();                          //Today's date
+        LocalDate birthday;  //Birth date
+        birthday = LocalDate.of(dob);
+
+        Period p = Period.between(birthday, today);
+
+        ageText.setText(String.valueOf(p.getYears()));
+        String dobq=  calculateAge(dob, today);
+
+        }
+
+        */
+        /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+            if ((birthDate != null) && (currentDate != null)) {
+                return Period.between(birthDate, currentDate).getYears();
+            } else {
+                return 0;
+            }
+
+            */
+    }//GEN-LAST:event_txtDOBuDobKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -182,7 +254,7 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContact;
-    private javax.swing.JTextField txtDOB;
+    private com.toedter.calendar.JDateChooser txtDOB;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtSpecialization;
     private javax.swing.JTextField txtState;

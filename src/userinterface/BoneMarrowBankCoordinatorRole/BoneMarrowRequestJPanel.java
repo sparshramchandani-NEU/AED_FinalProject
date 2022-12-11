@@ -171,7 +171,7 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
         lblBoneMarrowBank.setText("Bone Marrow Bank");
         jPanel3.add(lblBoneMarrowBank);
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 70));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 70));
 
         tblHLAAvailability.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         tblHLAAvailability.setModel(new javax.swing.table.DefaultTableModel(
