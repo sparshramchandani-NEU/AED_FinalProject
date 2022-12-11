@@ -138,7 +138,9 @@ public class StatisticsJPanel extends javax.swing.JPanel {
         DefaultPieDataset pieDataset = new DefaultPieDataset();
         
         pieDataset.setValue("BoneMarrow Donor", system.getDonorDirectory().getDonorList().size());
+        System.out.println(system.getDonorDirectory().getDonorList());
         pieDataset.setValue("BoneMarrow Patient(Receiver)", system.getPatientDirectory().getPatientList().size());
+        System.out.println(system.getPatientDirectory().getPatientList());
        // pieDataset.setValue("Three", new Integer(30));
        // pieDataset.setValue("Four", new Integer(40));
         JFreeChart piechart = ChartFactory.createPieChart("Pie Chart", pieDataset, true, true, true);

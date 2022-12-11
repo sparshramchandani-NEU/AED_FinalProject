@@ -47,10 +47,10 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author parth
  */
-public class NewDonorJPanel extends javax.swing.JPanel {
+public class DonorRegistrationForm extends javax.swing.JPanel {
 
     /**
-     * Creates new form NewDonorJPanel
+     * Creates new form DonorRegistrationForm
      */
     
     private boolean emailValid;
@@ -62,7 +62,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     private ButtonGroup radioGroup3;
     private ButtonGroup radioGroup4;
             
-    public NewDonorJPanel(EcoSystem system)
+    public DonorRegistrationForm(EcoSystem system)
     {
         initComponents();
         this.system = system;
@@ -477,15 +477,15 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblInjuryConfirmation.setText("By Registering to join this cause, you are confirming that");
         add(lblInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(255, 164, 0));
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/GovernmentCoordinatorRole/backarrow1.png"))); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, 80, 30));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 670, 80, 70));
 
         dobDateField.setBackground(new java.awt.Color(255, 255, 255));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -760,7 +760,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
                  fis.read(tempdP);
                  fis.close();
              } catch (IOException ex) {
-                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                 Logger.getLogger(DonorRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
              }             
               lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
               lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
@@ -972,7 +972,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         // TODO add your handling code here:
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
-        NewDonorJPanel.super.setVisible(false);
+        DonorRegistrationForm.super.setVisible(false);
         
     }//GEN-LAST:event_btnBackActionPerformed
 
