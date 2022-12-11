@@ -17,6 +17,10 @@ import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import jdk.nashorn.api.tree.BreakTree;
 
 /**
  *
@@ -143,7 +147,7 @@ public class ManageMedicalTechnicianProfile extends javax.swing.JPanel {
         add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 324, -1, -1));
 
         cmbGender.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        cmbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));
+        cmbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "Male", "Female", "Others" }));
         add(cmbGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 197, -1, -1));
 
         lblSpecialization.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -153,6 +157,12 @@ public class ManageMedicalTechnicianProfile extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        if(String.valueOf(cmbGender.getSelectedIndex()).equals("Select")){
+            cmbGender.setBorder(BorderFactory.createLineBorder(Color.RED));
+            cmbGender.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, "Please Select Gender");
+            return;
+        }
         userAccount.getEmployee().setCity(txtCity.getText());
         userAccount.getEmployee().setContactNumber(Integer.parseInt(txtContact.getText()));
         userAccount.getEmployee().setDateOfBirth(new Date(txtDOB.getText()));

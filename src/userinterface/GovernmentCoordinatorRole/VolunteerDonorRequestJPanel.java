@@ -299,6 +299,11 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1730, -1));
 
         txtBrainInjury.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        txtBrainInjury.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBrainInjuryActionPerformed(evt);
+            }
+        });
         add(txtBrainInjury, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 100, 30));
 
         txtBreathingProblem.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -465,11 +470,35 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
             txtContactNumber.setText(String.valueOf(donorRequest.getContact()));
             txtEmailID.setText(donorRequest.getEmailID());
             txtStatus.setText(donorRequest.getStatus());
+            
+            if(String.valueOf(donorRequest.isBrainInjury()).equals("true")){
+                txtBrainInjury.setText("No");
+            }else{
+                txtBrainInjury.setText("Yes");
+            }
+            
+            if(String.valueOf(donorRequest.isBreathingProb()).equals("true")){
+                txtBreathingProblem.setText("No");
+            }else{
+                txtBreathingProblem.setText("Yes");
+            }
+            
+             if(String.valueOf(donorRequest.isChronicPains()).equals("true")){
+                txtSufferingChronicPains.setText("No");
+            }else{
+                txtSufferingChronicPains.setText("Yes");
+            }
+             
+              if(String.valueOf(donorRequest.isDiabitiesBP()).equals("true")){
+                txtDiabetesAndBloodPressure.setText("No");
+            }else{
+                txtDiabetesAndBloodPressure.setText("Yes");
+            }
 
-            txtBrainInjury.setText(String.valueOf(donorRequest.isBrainInjury()));
-            txtBreathingProblem.setText(String.valueOf(donorRequest.isBreathingProb()));
-            txtDiabetesAndBloodPressure.setText(String.valueOf(donorRequest.isDiabitiesBP()));
-            txtSufferingChronicPains.setText(String.valueOf(donorRequest.isChronicPains()));
+//            txtBrainInjury.setText(String.valueOf(donorRequest.isBrainInjury()));
+//            txtBreathingProblem.setText(String.valueOf(donorRequest.isBreathingProb()));
+//            txtDiabetesAndBloodPressure.setText(String.valueOf(donorRequest.isDiabitiesBP()));
+//            txtSufferingChronicPains.setText(String.valueOf(donorRequest.isChronicPains()));
 
             if(donorRequest.getdP() !=null){
                 //Working line
@@ -647,6 +676,10 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
     private void txtZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipCodeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtZipCodeActionPerformed
+
+    private void txtBrainInjuryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrainInjuryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBrainInjuryActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
