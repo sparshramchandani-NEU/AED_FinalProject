@@ -47,12 +47,15 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     /**
      * Creates new form NewReceiverJPanel
      */
+   
+    
     private EcoSystem system;
     private byte[] tempdP;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private boolean emailValid;
     private int yesno;
     private ButtonGroup radioGroup1;
+    
     
     public NewReceiverJPanel(EcoSystem system) {
         initComponents();
@@ -63,8 +66,14 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         radioGroup1.add(rdbNo);
         
         populateGenderComboBox();
-        populateStateComboBox();        
+        populateStateComboBox();     
+        HideLable();
     }
+    
+     private void HideLable(){
+    lblDiagnosedDate.setVisible(false);
+    diagnosedDateChooser.setVisible(false);
+}
   
     private void populateGenderComboBox(){
       cmbGender.addItem("Male");
@@ -137,6 +146,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        diagnosisBtnGroup = new javax.swing.ButtonGroup();
         lblStreetAddress = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
@@ -174,10 +184,10 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         jSeparator2 = new javax.swing.JSeparator();
         lblBioDetails = new javax.swing.JLabel();
         lblAddressDetails = new javax.swing.JLabel();
-        txtHLAType = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         diagnosedDateChooser = new com.toedter.calendar.JDateChooser();
         dateDOB = new com.toedter.calendar.JDateChooser();
+        txtHLAType = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1350, 718));
@@ -306,11 +316,18 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         add(btnAddPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 270, 90, 30));
 
         rdbYes.setBackground(new java.awt.Color(255, 255, 255));
+        diagnosisBtnGroup.add(rdbYes);
         rdbYes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         rdbYes.setText("Yes");
+        rdbYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbYesActionPerformed(evt);
+            }
+        });
         add(rdbYes, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 500, -1, -1));
 
         rdbNo.setBackground(new java.awt.Color(255, 255, 255));
+        diagnosisBtnGroup.add(rdbNo);
         rdbNo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         rdbNo.setText("No");
         rdbNo.addActionListener(new java.awt.event.ActionListener() {
@@ -399,14 +416,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         lblAddressDetails.setText("Address Details");
         add(lblAddressDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 170, -1));
 
-        txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        txtHLAType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHLATypeActionPerformed(evt);
-            }
-        });
-        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 320, 170, -1));
-
         btnBack.setBackground(new java.awt.Color(255, 164, 0));
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnBack.setText("Back");
@@ -429,11 +438,15 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         diagnosedDateChooser.setBackground(new java.awt.Color(255, 255, 255));
         diagnosedDateChooser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(diagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, 180, -1));
+        add(diagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 560, 180, -1));
 
         dateDOB.setBackground(new java.awt.Color(255, 255, 255));
         dateDOB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         add(dateDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 180, -1));
+
+        txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        txtHLAType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "HLA_A", "HLA_B", "HLA_C", "HLA_DR", "HLA_DBQ1", " " }));
+        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 322, 180, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -443,7 +456,9 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             lblProfilePicture.setBorder(BorderFactory.createLineBorder(Color.RED));
             lblProfilePicture.setForeground(Color.red);
             btnAddPhoto.setBorder(BorderFactory.createLineBorder(Color.RED));
-            btnAddPhoto.setForeground(Color.red);       
+            btnAddPhoto.setForeground(Color.red); 
+            System.out.println("Please add pp");
+//                JOptionPane.showMessageDialog(null,new JLabel(  "<html><b>Please add PP</b></html>") , "Error", JOptionPane.ERROR_MESSAGE);
         }
         if ( cmbState.getSelectedItem().equals("") ){
             cmbState.setBorder(BorderFactory.createLineBorder(Color.RED));
@@ -453,7 +468,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             cmbGender.setBorder(BorderFactory.createLineBorder(Color.RED));
             cmbGender.setForeground(Color.red);
         }
-        if ( txtHLAType.getText().equals("") ){
+        if ( txtHLAType.getSelectedItem().equals("Select") ){
             txtHLAType.setBorder(BorderFactory.createLineBorder(Color.RED));
             txtHLAType.setForeground(Color.red);
         }
@@ -505,7 +520,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
                 txtZipCode.getText().isEmpty() || txtStreetAddress.getText().isEmpty() || txtUID.getText().isEmpty() ||
                 dateDOB.getDate() == null || diagnosedDateChooser.getDate() == null || txtAge.getText().isEmpty() ||
                 String.valueOf(cmbGender.getSelectedItem()).equals("") || 
-                String.valueOf(txtHLAType.getText()).equals("") || 
+                String.valueOf(txtHLAType.getSelectedItem()).equals("") || 
                 String.valueOf(cmbState.getSelectedItem()).equals("") ||
                 lblProfilePicture == null
                 )
@@ -575,7 +590,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         
        else{
             try {
-                patientrequest.getHla().updateHLAlist(txtHLAType.getText());
+                patientrequest.getHla().updateHLAlist(String.valueOf(txtHLAType.getSelectedItem()));
             }
             catch (Exception e) {
                 JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Patient's HLA Type can only be one of these HLA_A,HLA_B,HLA_C,HLA_DR,HLA_DBQ1</b></html>"));
@@ -742,7 +757,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         txtStreetAddress.setText("");
         txtCity.setText("");
         txtZipCode.setText("");
-        txtHLAType.setText("");
+        txtHLAType.setSelectedItem("");
 
         cmbGender.setSelectedItem("");
         cmbState.setSelectedItem("");
@@ -781,10 +796,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_uEmailKeyTyped
 
-    private void txtHLATypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHLATypeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHLATypeActionPerformed
-
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         JFrame frame = (JFrame) getWindowAncestor(this);
@@ -798,7 +809,16 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
     private void rdbNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbNoActionPerformed
         // TODO add your handling code here:
+        lblDiagnosedDate.setVisible(false);
+        diagnosedDateChooser.setVisible(false);
     }//GEN-LAST:event_rdbNoActionPerformed
+
+    private void rdbYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbYesActionPerformed
+        // TODO add your handling code here:
+        lblDiagnosedDate.setVisible(true);
+        diagnosedDateChooser.setVisible(true);
+        
+    }//GEN-LAST:event_rdbYesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -809,6 +829,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cmbState;
     private com.toedter.calendar.JDateChooser dateDOB;
     private com.toedter.calendar.JDateChooser diagnosedDateChooser;
+    private javax.swing.ButtonGroup diagnosisBtnGroup;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
@@ -838,7 +859,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContactNumber;
     private javax.swing.JTextField txtEmailID;
-    private javax.swing.JTextField txtHLAType;
+    private javax.swing.JComboBox<String> txtHLAType;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtStreetAddress;
     private javax.swing.JTextField txtUID;

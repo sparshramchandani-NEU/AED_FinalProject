@@ -94,12 +94,16 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     }
   
   private void populateGenderComboBox(){
-           cmbGender.addItem("Male");
-           cmbGender.addItem("Female");
-           cmbGender.addItem("Other");
+      cmbGender1.addItem("Select");
+           cmbGender1.addItem("Male");
+           cmbGender1.addItem("Female");
+           cmbGender1.addItem("Other");
         }
   
+  
+  
   private void populateStateComboBox(){
+           cmbState.addItem("Select");
            cmbState.addItem("California");
            cmbState.addItem("Massachusetts");
            cmbState.addItem("Georgia");
@@ -144,7 +148,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         txtAge.setEnabled(false);
         txtEmailID.setEnabled(false);
         txtContactNumber.setEnabled(false);
-        cmbGender.setEnabled(false);
+        txtHLAType.setEnabled(false);
         txtHLAType.setEnabled(false);
         txtStreetAddress.setEnabled(false);
         txtCity.setEnabled(false);
@@ -204,7 +208,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblProfilePicture = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         cmbState = new javax.swing.JComboBox();
-        cmbGender = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -212,9 +215,10 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         lblInjuryConfirmation = new javax.swing.JLabel();
-        txtHLAType = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         dobDateField = new com.toedter.calendar.JDateChooser();
+        cmbGender1 = new javax.swing.JComboBox();
+        txtHLAType = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -238,7 +242,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         lblRegNum.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        lblRegNum.setText("Reg Num");
+        lblRegNum.setText("Donor ID");
         add(lblRegNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -335,19 +339,19 @@ public class NewDonorJPanel extends javax.swing.JPanel {
 
         lblBrainInjuryConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         lblBrainInjuryConfirmation.setText(" Do you have any history with severe brain injuries? ");
-        add(lblBrainInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 450, -1, -1));
+        add(lblBrainInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 630, -1, -1));
 
         lblBreathingProblemConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         lblBreathingProblemConfirmation.setText("Do you have any history with breathing problem?");
-        add(lblBreathingProblemConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, -1, -1));
+        add(lblBreathingProblemConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 570, -1, -1));
 
         lblDiabetesAndBloodPressureConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         lblDiabetesAndBloodPressureConfirmation.setText("Do you have any history with Diabities and Blood Pressure?");
-        add(lblDiabetesAndBloodPressureConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 570, 490, -1));
+        add(lblDiabetesAndBloodPressureConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 510, -1));
 
         lblChronicPainConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         lblChronicPainConfirmation.setText("Are you suffering with any Chronic pain in the ares of neck, back, or spine?");
-        add(lblChronicPainConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 630, 630, 20));
+        add(lblChronicPainConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 450, 630, 20));
 
         btnSubmit.setBackground(new java.awt.Color(255, 164, 0));
         btnSubmit.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -370,36 +374,46 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         add(btnAddPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 320, 110, 30));
 
         btnYesQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ2.setText("Yes");
-        add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
+        btnYesQ2.setText("No");
+        add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
 
         btnNoQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ2.setText("No");
-        add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
+        btnNoQ2.setText("Yes");
+        add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
 
         btnNoQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ1.setText("No");
-        add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
+        btnNoQ1.setText("Yes");
+        add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
 
         btnYesQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ1.setText("Yes");
-        add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
+        btnYesQ1.setText("No");
+        btnYesQ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnYesQ1ActionPerformed(evt);
+            }
+        });
+        add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
 
         btnNoQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ3.setText("No");
-        add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
+        btnNoQ3.setText("Yes");
+        add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
 
         btnYesQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ3.setText("Yes");
-        add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
+        btnYesQ3.setText("No");
+        add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
 
         btnNoQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnNoQ4.setText("No");
-        add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
+        btnNoQ4.setText("Yes");
+        add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
 
         btnYesQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnYesQ4.setText("Yes");
-        add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
+        btnYesQ4.setText("No");
+        btnYesQ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnYesQ4ActionPerformed(evt);
+            }
+        });
+        add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setForeground(new java.awt.Color(255, 164, 0));
@@ -423,14 +437,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             }
         });
         add(cmbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 180, -1));
-
-        cmbGender.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        cmbGender.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbGenderActionPerformed(evt);
-            }
-        });
-        add(cmbGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 170, -1));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -471,9 +477,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         lblInjuryConfirmation.setText("By Registering to join this cause, you are confirming that");
         add(lblInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
 
-        txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 330, 180, -1));
-
         btnBack.setBackground(new java.awt.Color(255, 164, 0));
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnBack.setText("Back");
@@ -508,6 +511,18 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             }
         });
         add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
+
+        cmbGender1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        cmbGender1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbGender1ActionPerformed(evt);
+            }
+        });
+        add(cmbGender1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 170, -1));
+
+        txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        txtHLAType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "HLA_A", "HLA_B", "HLA_C", "HLA_DR", "HLA_DBQ1", " " }));
+        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 322, 180, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -520,15 +535,15 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             btnAddPhoto.setBorder(BorderFactory.createLineBorder(Color.RED));
             btnAddPhoto.setForeground(Color.red);       
         }
-        if ( cmbState.getSelectedItem().equals("") ){
+        if ( cmbState.getSelectedItem().equals("Select") ){
             cmbState.setBorder(BorderFactory.createLineBorder(Color.RED));
             cmbState.setForeground(Color.red);
         }
-        if ( cmbGender.getSelectedItem().equals("") ){
-            cmbGender.setBorder(BorderFactory.createLineBorder(Color.RED));
-            cmbGender.setForeground(Color.red);
+        if ( txtHLAType.getSelectedItem().equals("Select") ){
+            txtHLAType.setBorder(BorderFactory.createLineBorder(Color.RED));
+            txtHLAType.setForeground(Color.red);
         }
-        if ( txtHLAType.getText().equals("") ){
+        if ( txtHLAType.getSelectedItem().equals("Select") ){
             txtHLAType.setBorder(BorderFactory.createLineBorder(Color.RED));
             txtHLAType.setForeground(Color.red);
         }
@@ -585,8 +600,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 txtUID.getText().isEmpty()         || 
                 dobDateField.getDate() == null      || 
                 txtAge.getText().isEmpty()         ||
-                String.valueOf(cmbGender.getSelectedItem()).equals("") || 
-                String.valueOf(txtHLAType.getText()).equals("") || 
+                String.valueOf(txtHLAType.getSelectedItem()).equals("") || 
+                String.valueOf(txtHLAType.getSelectedItem()).equals("") || 
                 String.valueOf(cmbState.getSelectedItem()).equals(""))
             { 
             JOptionPane.showMessageDialog(null,new JLabel(  "<html><b>All fields are mandatory!</b></html>") , "Error", JOptionPane.ERROR_MESSAGE);
@@ -647,7 +662,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
           
           else{
             try {
-                donorRequest.getHLA().updateHLAlist(txtHLAType.getText());
+                donorRequest.getHLA().updateHLAlist(String.valueOf(txtHLAType.getSelectedItem()));
             }
             catch (Exception e) {
                 JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Patient's HLA Type can only be one of these HLA_A,HLA_B,HLA_C,HLA_DR,HLA_DBQ1</b></html>"));
@@ -664,7 +679,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         donorRequest.setName(txtName.getText()); // Name
         donorRequest.setDob(dobDateField.getDate()); // DOB 
         donorRequest.setAge(Integer.parseInt(txtAge.getText())); // Age
-        donorRequest.setGender((String) cmbGender.getSelectedItem()); // gender
+        donorRequest.setGender((String) txtHLAType.getSelectedItem()); // gender
         donorRequest.setStreetAddress(txtStreetAddress.getText()); // streetAddress
         donorRequest.setCity(txtCity.getText()); // city
         donorRequest.setState((String) cmbState.getSelectedItem()); // state
@@ -772,7 +787,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         txtAge.setEnabled(false);
         txtEmailID.setEnabled(true);
         txtContactNumber.setEnabled(true);
-        cmbGender.setEnabled(true);
+        txtHLAType.setEnabled(true);
         txtHLAType.setEnabled(true);
         txtStreetAddress.setEnabled(true);
         txtCity.setEnabled(true);
@@ -796,9 +811,9 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         txtStreetAddress.setText("");
         txtCity.setText("");
         txtZipCode.setText("");
-        txtHLAType.setText("");
+        txtHLAType.setSelectedItem("Select");
         
-        cmbGender.setSelectedItem("");
+        txtHLAType.setSelectedItem("");
         cmbState.setSelectedItem("");
         
         dobDateField.setCalendar(null);
@@ -823,10 +838,6 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
        
         
     }//GEN-LAST:event_cmbStateActionPerformed
-
-    private void cmbGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbGenderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbGenderActionPerformed
 
     private void uEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uEmailKeyTyped
         // TODO add your handling code here:
@@ -962,6 +973,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
         NewDonorJPanel.super.setVisible(false);
+        
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtUIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUIDActionPerformed
@@ -1009,6 +1021,18 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
             */
     }//GEN-LAST:event_dobDateFielduDobKeyTyped
 
+    private void btnYesQ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYesQ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnYesQ1ActionPerformed
+
+    private void btnYesQ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYesQ4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnYesQ4ActionPerformed
+
+    private void cmbGender1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbGender1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbGender1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddPhoto;
@@ -1022,7 +1046,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     private javax.swing.JRadioButton btnYesQ2;
     private javax.swing.JRadioButton btnYesQ3;
     private javax.swing.JRadioButton btnYesQ4;
-    private javax.swing.JComboBox cmbGender;
+    private javax.swing.JComboBox cmbGender1;
     private javax.swing.JComboBox cmbState;
     private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JButton jButton2;
@@ -1055,7 +1079,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContactNumber;
     private javax.swing.JTextField txtEmailID;
-    private javax.swing.JTextField txtHLAType;
+    private javax.swing.JComboBox<String> txtHLAType;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtStreetAddress;
     private javax.swing.JTextField txtUID;
