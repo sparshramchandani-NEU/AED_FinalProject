@@ -47,10 +47,10 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author parth
  */
-public class NewDonorJPanel extends javax.swing.JPanel {
+public class DonorRegistrationForm extends javax.swing.JPanel {
 
     /**
-     * Creates new form NewDonorJPanel
+     * Creates new form DonorRegistrationForm
      */
     
     private boolean emailValid;
@@ -62,7 +62,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     private ButtonGroup radioGroup3;
     private ButtonGroup radioGroup4;
             
-    public NewDonorJPanel(EcoSystem system)
+    public DonorRegistrationForm(EcoSystem system)
     {
         initComponents();
         this.system = system;
@@ -760,7 +760,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
                  fis.read(tempdP);
                  fis.close();
              } catch (IOException ex) {
-                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                 Logger.getLogger(DonorRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
              }             
               lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
               lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
@@ -972,7 +972,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         // TODO add your handling code here:
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
-        NewDonorJPanel.super.setVisible(false);
+        DonorRegistrationForm.super.setVisible(false);
         
     }//GEN-LAST:event_btnBackActionPerformed
 

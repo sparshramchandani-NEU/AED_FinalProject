@@ -15,7 +15,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import userinterface.BloodLeukemia_Centre_Coordinator_Role.NewReceiverJPanel;
+import userinterface.BloodLeukemia_Centre_Coordinator_Role.RecieverRegistrationForm;
 
 /**
  *
@@ -389,7 +389,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnPatientRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientRegistrationActionPerformed
         new DonorReceiverFramePage("receiver", system).show();
-//            NewReceiverJPanel newreciever = new NewReceiverJPanel(system);
+//            RecieverRegistrationForm newreciever = new RecieverRegistrationForm(system);
 //            jSplitPane1.setRightComponent(newreciever);
             
 

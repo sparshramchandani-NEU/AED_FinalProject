@@ -10,8 +10,8 @@ import Business.People.DonorRequestDirectory;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import userinterface.BloodLeukemia_Centre_Coordinator_Role.NewReceiverJPanel;
-import userinterface.GovernmentCoordinatorRole.NewDonorJPanel;
+import userinterface.BloodLeukemia_Centre_Coordinator_Role.RecieverRegistrationForm;
+import userinterface.GovernmentCoordinatorRole.DonorRegistrationForm;
 
 
 /**
@@ -37,7 +37,7 @@ public class DonorReceiverFramePage extends javax.swing.JFrame {
         if(type.equals("donor")){
             userProcessContainer.remove(this);
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-            NewDonorJPanel newdpanel = new NewDonorJPanel(system);
+            DonorRegistrationForm newdpanel = new DonorRegistrationForm(system);
             userProcessContainer.add("workArea", newdpanel);
             
             layout.next(userProcessContainer);
@@ -45,7 +45,7 @@ public class DonorReceiverFramePage extends javax.swing.JFrame {
         else{
             userProcessContainer.remove(this);
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-            NewReceiverJPanel newdpanel = new NewReceiverJPanel(system);
+            RecieverRegistrationForm newdpanel = new RecieverRegistrationForm(system);
             userProcessContainer.add("workArea", newdpanel);
             
             layout.next(userProcessContainer);

@@ -35,17 +35,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import static javax.swing.SwingUtilities.getWindowAncestor;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import userinterface.GovernmentCoordinatorRole.NewDonorJPanel;
-import static userinterface.GovernmentCoordinatorRole.NewDonorJPanel.emailValidator;
+import userinterface.GovernmentCoordinatorRole.DonorRegistrationForm;
+import static userinterface.GovernmentCoordinatorRole.DonorRegistrationForm.emailValidator;
 
 /**
  *
  * @author parth
  */
-public class NewReceiverJPanel extends javax.swing.JPanel {
+public class RecieverRegistrationForm extends javax.swing.JPanel {
 
     /**
-     * Creates new form NewReceiverJPanel
+     * Creates new form RecieverRegistrationForm
      */
    
     
@@ -57,7 +57,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     private ButtonGroup radioGroup1;
     
     
-    public NewReceiverJPanel(EcoSystem system) {
+    public RecieverRegistrationForm(EcoSystem system) {
         initComponents();
         this.system = system;
         this.radioGroup1 = new ButtonGroup();
@@ -823,7 +823,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
                  fis.read(tempdP);
                  fis.close();
              } catch (IOException ex) {
-                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                 Logger.getLogger(DonorRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
              }             
               lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
               lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
@@ -924,7 +924,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
-        NewReceiverJPanel.super.setVisible(false);
+        RecieverRegistrationForm.super.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnBackAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_btnBackAncestorMoved
