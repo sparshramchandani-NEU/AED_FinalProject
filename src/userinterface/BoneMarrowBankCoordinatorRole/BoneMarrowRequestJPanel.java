@@ -57,8 +57,13 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
         
         populateBoneMarrowCoordinatorTable();
         populateHlaAvailabilityTable();
+        
+        HideApproveLael();
     }
 
+    private void HideApproveLael(){
+        approveLabel.setVisible(false);
+    }
    
     public void populateBoneMarrowCoordinatorTable(){
         DefaultTableModel model = (DefaultTableModel)tblBoneMarrowCoordinator.getModel();
@@ -99,17 +104,15 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHLAAvailability = new javax.swing.JTable();
         lblBoneMarrowInventory = new javax.swing.JLabel();
+        approveLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1150, 720));
         setPreferredSize(new java.awt.Dimension(1150, 830));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblListOfBoneMarrowRequests.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblListOfBoneMarrowRequests.setText("List of BoneMarrow Requests");
-        add(lblListOfBoneMarrowRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 247, -1, -1));
 
         btnApprove.setBackground(new java.awt.Color(255, 164, 0));
         btnApprove.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -120,7 +123,6 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
                 btnApproveActionPerformed(evt);
             }
         });
-        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, 130, 30));
 
         btnOnHold.setBackground(new java.awt.Color(255, 164, 0));
         btnOnHold.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -131,7 +133,6 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
                 btnOnHoldActionPerformed(evt);
             }
         });
-        add(btnOnHold, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 110, 30));
 
         tblBoneMarrowCoordinator.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         tblBoneMarrowCoordinator.setModel(new javax.swing.table.DefaultTableModel(
@@ -159,8 +160,6 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblBoneMarrowCoordinator);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 890, 170));
-
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
         jPanel3.setLayout(new java.awt.GridLayout(1, 0));
@@ -169,9 +168,10 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
         lblBoneMarrowBank.setForeground(new java.awt.Color(255, 255, 255));
         lblBoneMarrowBank.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBoneMarrowBank.setText("Bone Marrow Bank");
+        lblBoneMarrowBank.setMaximumSize(new java.awt.Dimension(350, 28));
+        lblBoneMarrowBank.setMinimumSize(new java.awt.Dimension(350, 28));
+        lblBoneMarrowBank.setPreferredSize(new java.awt.Dimension(350, 28));
         jPanel3.add(lblBoneMarrowBank);
-
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 70));
 
         tblHLAAvailability.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         tblHLAAvailability.setModel(new javax.swing.table.DefaultTableModel(
@@ -203,15 +203,77 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
             tblHLAAvailability.getColumnModel().getColumn(1).setPreferredWidth(30);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 900, 170));
-
         lblBoneMarrowInventory.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblBoneMarrowInventory.setText("Bone Marrow Inventory");
-        add(lblBoneMarrowInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 230, 30));
+
+        approveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/BloodLeukemia_Centre_Coordinator_Role/approve1.png"))); // NOI18N
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(460, 460, 460)
+                        .addComponent(btnOnHold, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                .addComponent(approveLabel)
+                .addGap(155, 155, 155))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(400, 400, 400)
+                        .addComponent(lblBoneMarrowInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(316, 316, 316)
+                                .addComponent(jLabel2))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(380, 380, 380)
+                        .addComponent(lblListOfBoneMarrowRequests)))
+                .addGap(0, 0, 0))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(lblBoneMarrowInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(jLabel2)))
+                .addGap(20, 20, 20)
+                .addComponent(lblListOfBoneMarrowRequests)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnOnHold, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(approveLabel))))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         // TODO add your handling code here:
+        approveLabel.setVisible(true);
         
         int selectedRow = tblBoneMarrowCoordinator.getSelectedRow();
         
@@ -331,6 +393,7 @@ public class BoneMarrowRequestJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel approveLabel;
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnOnHold;
     private javax.swing.JLabel jLabel2;

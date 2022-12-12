@@ -116,7 +116,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         tblDonorRequest.setRowHeight(30);
         jScrollPane1.setViewportView(tblDonorRequest);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 1030, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 1030, 160));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -150,7 +150,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, 80, 30));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, 80, 30));
 
         tblDonor.setBackground(new java.awt.Color(0, 0, 0));
         tblDonor.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -167,17 +167,17 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         tblDonor.setRowHeight(30);
         jScrollPane2.setViewportView(tblDonor);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 1030, 160));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 1030, 160));
 
         lblListOfDonorRequests.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         lblListOfDonorRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblListOfDonorRequests.setText("List of Donor Requests");
-        add(lblListOfDonorRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 510, -1));
+        add(lblListOfDonorRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 510, -1));
 
         lblListOfDonors.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         lblListOfDonors.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblListOfDonors.setText("List of Donors");
-        add(lblListOfDonors, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 510, -1));
+        add(lblListOfDonors, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 510, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed

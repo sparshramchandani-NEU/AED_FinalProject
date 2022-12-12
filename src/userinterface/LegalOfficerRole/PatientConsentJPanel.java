@@ -270,7 +270,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement_DonorReceiverAdvocate.jpg"));
+            img1 = ImageIO.read(new File("/organ_Agreement_DonorReceiverAdvocate.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -315,7 +315,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement_Donor.jpg"));
+            img1 = ImageIO.read(new File("/organ_Agreement_Donor.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -329,7 +329,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement.jpg"));
+            img1 = ImageIO.read(new File("/organ_Agreement.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
