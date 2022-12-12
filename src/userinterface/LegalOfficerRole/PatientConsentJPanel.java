@@ -22,6 +22,8 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URL;
 import java.util.Properties;
 import javax.imageio.ImageIO;
 import javax.mail.Message;
@@ -136,7 +138,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnSignFormActionPerformed(evt);
             }
         });
-        add(btnSignForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 130, 40));
+        add(btnSignForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 130, 40));
 
         btnApprove.setBackground(new java.awt.Color(255, 164, 0));
         btnApprove.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -146,7 +148,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnApproveActionPerformed(evt);
             }
         });
-        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, 100, 40));
+        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 590, 90, 40));
 
         btnReject.setBackground(new java.awt.Color(255, 164, 0));
         btnReject.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -156,7 +158,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnRejectActionPerformed(evt);
             }
         });
-        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 100, 40));
+        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 590, 80, 40));
 
         btnDisplayConsentForm.setBackground(new java.awt.Color(255, 164, 0));
         btnDisplayConsentForm.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -166,7 +168,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnDisplayConsentFormActionPerformed(evt);
             }
         });
-        add(btnDisplayConsentForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 180, 40));
+        add(btnDisplayConsentForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 180, 40));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -202,7 +204,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
                 btnPatientAgreementActionPerformed(evt);
             }
         });
-        add(btnPatientAgreement, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 160, 40));
+        add(btnPatientAgreement, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 160, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
@@ -270,7 +272,10 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement_DonorReceiverAdvocate.jpg"));
+//            URI urlToImage = this.getClass().getResource("/organ_Agreement_DonorReceiverAdvocate.png");
+                img1 = ImageIO.read(new File("C:\\Users\\HP\\Downloads\\AED_FinalProject-main\\Aed_final_v4\\src\\organ_Agreement_DonorReceiverAdvocate.jpg"));
+
+//img1 = ImageIO.read(new File("C:/Users/HP/Downloads/AED_FinalProject-main/Aed final v4/src/userinterface/LegalOfficerRole/organ_Agreement_DonorReceiverAdvocate.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -315,7 +320,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement_Donor.jpg"));
+            img1 = ImageIO.read(new File("C:\\Users\\HP\\Downloads\\AED_FinalProject-main\\Aed_final_v4\\src\\organ_Agreement_Donor.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -329,7 +334,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         BufferedImage img1 = null;
         try {
-            img1 = ImageIO.read(new File("organ_Agreement.jpg"));
+            img1 = ImageIO.read(new File("C:\\Users\\HP\\Downloads\\AED_FinalProject-main\\Aed_final_v4\\src\\organ_Agreement.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

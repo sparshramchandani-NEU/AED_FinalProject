@@ -212,12 +212,12 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblDonorDetails);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 1200, 210));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 1200, 210));
 
         lblDonorRequests.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         lblDonorRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDonorRequests.setText("Donor Requests");
-        add(lblDonorRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 210, -1));
+        add(lblDonorRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 210, -1));
 
         lblName.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblName.setText("Name");
@@ -229,16 +229,16 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         txtName.setEnabled(false);
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 212, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, 212, -1));
 
         txtContact.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         txtContact.setEnabled(false);
-        add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 212, -1));
+        add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 212, -1));
 
         lblCreateProfile.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         lblCreateProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateProfile.setText("Create Donor Profile");
-        add(lblCreateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
+        add(lblCreateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, -1, -1));
 
         tblDonorTable.setBackground(new java.awt.Color(0, 0, 0));
         tblDonorTable.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -263,7 +263,7 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
         tblDonorTable.setRowHeight(30);
         jScrollPane2.setViewportView(tblDonorTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 600, 1180, 220));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, 1180, 220));
 
         titleJPanel.setBackground(new java.awt.Color(0, 0, 0));
         titleJPanel.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -290,19 +290,19 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
 
         lblUID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblUID.setText("UID");
-        add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, -1, -1));
+        add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, -1, -1));
 
         lblBloodGroup.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblBloodGroup.setText("Blood Group");
-        add(lblBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 500, -1, 30));
+        add(lblBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 30));
 
         txtUID.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         txtUID.setEnabled(false);
-        add(txtUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 230, -1));
+        add(txtUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 420, 230, -1));
 
         txtBloodGroup.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         txtBloodGroup.setEnabled(false);
-        add(txtBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 500, 230, -1));
+        add(txtBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 470, 230, -1));
 
         btnCreateDonor.setBackground(new java.awt.Color(255, 164, 0));
         btnCreateDonor.setText("Create Donor");
@@ -311,7 +311,7 @@ public class CreateDonorJPanel extends javax.swing.JPanel {
                 btnCreateDonorActionPerformed(evt);
             }
         });
-        add(btnCreateDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, 110, 30));
+        add(btnCreateDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblDonorDetailsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDonorDetailsMousePressed

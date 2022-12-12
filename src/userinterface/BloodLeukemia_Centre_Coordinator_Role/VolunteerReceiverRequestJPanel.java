@@ -55,6 +55,11 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         this.network = network;
         tblRequest.getTableHeader().setDefaultRenderer(new MyTableFormat());
         populateRequestTable();
+        HideApproveLael();
+    }
+    
+    private void HideApproveLael(){
+        approveLabel.setVisible(false);
     }
   
 
@@ -117,50 +122,39 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         lblProfilePicture = new javax.swing.JLabel();
         lblStatus = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         btnApprove = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
         covidDiagnosedDateChooser = new com.toedter.calendar.JDateChooser();
         dobDateField = new com.toedter.calendar.JDateChooser();
+        approveLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1000, 700));
         setPreferredSize(new java.awt.Dimension(1150, 720));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblUID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblUID.setText("UID");
-        add(lblUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 180, -1));
 
         lblName.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblName.setText("Name");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, -1, -1));
 
         txtName.setEditable(false);
         txtName.setBackground(new java.awt.Color(255, 255, 255));
         txtName.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, 190, -1));
 
         lblDOB.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblDOB.setText("DOB");
-        add(lblDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblAge.setText("Age");
-        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, -1, -1));
 
         txtAge.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 190, -1));
 
         lblContactNumber.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblContactNumber.setText("Contact Number");
-        add(lblContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
 
         txtContactNumber.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtContactNumber.addActionListener(new java.awt.event.ActionListener() {
@@ -168,50 +162,37 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
                 txtContactNumberActionPerformed(evt);
             }
         });
-        add(txtContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 180, -1));
 
         lblEmailID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblEmailID.setText("Email ID");
-        add(lblEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, -1, -1));
 
         txtEmailID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 190, -1));
 
         lblGender.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblGender.setText("Gender");
-        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 70, -1));
 
         txtGender.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 180, -1));
 
         lblHLAType.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblHLAType.setText("HLA Types");
-        add(lblHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, -1));
 
         txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 190, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel11.setText("Cancer diagnosed date");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 720, -1, -1));
 
         lblStreetAddress.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblStreetAddress.setText("Street address");
-        add(lblStreetAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, -1, 30));
 
         txtStreetAddress.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtStreetAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 176, -1));
 
         lblCity.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblCity.setText("City");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
 
         txtCity.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 180, -1));
 
         lblState.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblState.setText("State");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 680, -1, -1));
 
         txtState.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtState.addActionListener(new java.awt.event.ActionListener() {
@@ -219,18 +200,14 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
                 txtStateActionPerformed(evt);
             }
         });
-        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 670, 180, -1));
 
         lblZipCode.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblZipCode.setText("ZipCode");
-        add(lblZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 740, -1, -1));
 
         txtZipCode.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 730, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel19.setText("Was your disease confirmed by Medical Practitioner?");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -254,14 +231,16 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblPatientRequestHadling, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addComponent(lblPatientRequestHadling, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, -1));
-
         txtLabConfirmation.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtLabConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 660, 210, -1));
+        txtLabConfirmation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLabConfirmationActionPerformed(evt);
+            }
+        });
 
         tblRequest.setBackground(new java.awt.Color(0, 0, 0));
         tblRequest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -292,40 +271,25 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequest);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 980, 190));
-
         txtStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStatusActionPerformed(evt);
             }
         });
-        add(txtStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 200, -1));
 
         jLabel1.setText("Status");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 11, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setForeground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 164, 0)));
         lblProfilePicture.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 310, 160, 140));
 
         lblStatus.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblStatus.setText("Status");
-        add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, -1, -1));
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, 20, 200));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 860, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setText("Cancer History Details");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel5.setText("Location Details");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
 
         btnApprove.setBackground(new java.awt.Color(255, 164, 0));
         btnApprove.setText("Approve");
@@ -334,7 +298,6 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
                 btnApproveActionPerformed(evt);
             }
         });
-        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 490, -1, -1));
 
         btnReject.setBackground(new java.awt.Color(255, 164, 0));
         btnReject.setText("Reject");
@@ -343,17 +306,189 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
                 btnRejectActionPerformed(evt);
             }
         });
-        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 490, 80, -1));
 
         covidDiagnosedDateChooser.setBackground(new java.awt.Color(0, 0, 0));
         covidDiagnosedDateChooser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         covidDiagnosedDateChooser.setForeground(new java.awt.Color(255, 255, 255));
-        add(covidDiagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 720, 180, -1));
 
         dobDateField.setBackground(new java.awt.Color(0, 0, 0));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         dobDateField.setForeground(new java.awt.Color(255, 255, 255));
-        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 180, -1));
+
+        approveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/BloodLeukemia_Centre_Coordinator_Role/approve1.png"))); // NOI18N
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(560, 560, 560)
+                .addComponent(jLabel1))
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1580, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblZipCode)
+                    .addComponent(lblStreetAddress)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblUID)
+                            .addComponent(lblDOB)
+                            .addComponent(lblContactNumber)
+                            .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtUID)
+                                    .addComponent(dobDateField, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                    .addComponent(txtZipCode)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(lblCity)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblState)
+                        .addGap(111, 111, 111)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                            .addComponent(txtState))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 280, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblName)
+                                    .addComponent(lblAge)
+                                    .addComponent(lblEmailID)
+                                    .addComponent(lblHLAType))
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEmailID, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtHLAType, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(36, 36, 36)
+                                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnApprove)))
+                        .addGap(382, 382, 382))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(lblStatus)
+                            .addComponent(jLabel19)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel11)
+                                    .addGap(29, 29, 29)
+                                    .addComponent(covidDiagnosedDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(235, 235, 235)
+                                    .addComponent(txtLabConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(239, 239, 239)
+                                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(approveLabel)
+                        .addGap(145, 145, 145))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel1))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtEmailID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtHLAType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblUID)
+                                .addGap(24, 24, 24)
+                                .addComponent(lblDOB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblContactNumber)
+                                    .addComponent(txtContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(15, 15, 15)
+                                .addComponent(lblGender))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblName)
+                                    .addComponent(txtUID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblAge)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblEmailID)
+                                        .addGap(13, 13, 13)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lblHLAType)
+                                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCity))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblState)
+                            .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(353, 353, 353)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblZipCode)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnApprove)
+                            .addComponent(btnReject))
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblStatus))
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtLabConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(covidDiagnosedDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(approveLabel)))))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtContactNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContactNumberActionPerformed
@@ -412,6 +547,7 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
+        approveLabel.setVisible(true);
         if( !txtStatus.getText().equals("New Request"))
             {
                 JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Request can not be approved!</b></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
@@ -545,9 +681,14 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
         //JOptionPane.showMessageDialog(null,"Rejected the Patient's Request!");
         }
     }//GEN-LAST:event_btnRejectActionPerformed
+
+    private void txtLabConfirmationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLabConfirmationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLabConfirmationActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel approveLabel;
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnReject;
     private com.toedter.calendar.JDateChooser covidDiagnosedDateChooser;
@@ -556,11 +697,8 @@ public class VolunteerReceiverRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblContactNumber;

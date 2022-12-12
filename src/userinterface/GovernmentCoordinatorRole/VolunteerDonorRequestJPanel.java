@@ -43,7 +43,12 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         
         tblRequest.getTableHeader().setDefaultRenderer(new MyTableFormat());
         populateRequestTable();
+        HideApproveLable();
      }
+    
+    private void HideApproveLable(){
+        approveLabel.setVisible(false);
+    }
    
      
         private void populateRequestTable(){
@@ -118,6 +123,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         btnApprove = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
         dobDateField = new com.toedter.calendar.JDateChooser();
+        approveLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1450, 830));
@@ -385,6 +391,9 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 170, -1));
+
+        approveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/GovernmentCoordinatorRole/approve1.png"))); // NOI18N
+        add(approveLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private ImageIcon setPicturebyte(byte[] byteArrayImage){
@@ -574,6 +583,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
                // TODO add your handling code here:
+               approveLabel.setVisible(true);
         if( !txtStatus.getText().equals("New Request"))
         {
             //JOptionPane.showMessageDialog(null,"Can Not Approve the Request!");
@@ -627,11 +637,14 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         }
         txtStatus.setText("Government Approved");
         
+        
         dB4OUtil.storeSystem(system);
         populateRequestTable();
          JOptionPane.showMessageDialog(null, new JLabel(  "<html><b>Request approved successfully!</b></html>"));
            
         //JOptionPane.showMessageDialog(null,"Request Approved. New Donor added!");
+        
+        
         
         
         
@@ -683,6 +696,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel approveLabel;
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnReject;
     private com.toedter.calendar.JDateChooser dobDateField;

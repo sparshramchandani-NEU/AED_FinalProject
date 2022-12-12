@@ -170,6 +170,10 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         lblName = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -210,10 +214,7 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
         cmbState = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         lblInjuryConfirmation = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         dobDateField = new com.toedter.calendar.JDateChooser();
@@ -226,11 +227,9 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 formMouseClicked(evt);
             }
         });
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblName.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblName.setText("Name");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
 
         txtName.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -238,12 +237,9 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 txtNameActionPerformed(evt);
             }
         });
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 170, -1));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         lblRegNum.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblRegNum.setText("Donor ID");
-        add(lblRegNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
 
         txtUID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtUID.addActionListener(new java.awt.event.ActionListener() {
@@ -251,15 +247,12 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 txtUIDActionPerformed(evt);
             }
         });
-        add(txtUID, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, 180, -1));
 
         lblDate.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblDate.setText("DOB");
-        add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblAge.setText("Age");
-        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, -1, -1));
 
         txtAge.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtAge.setEnabled(false);
@@ -278,51 +271,38 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 txtAgeKeyPressed(evt);
             }
         });
-        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 180, -1));
 
         lblGender.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblGender.setText("Gender");
-        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
 
         lblHLAType.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblHLAType.setText("HLA Types");
-        add(lblHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, -1, 20));
 
         txtStreetAddress.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtStreetAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 180, -1));
 
         lblStreetAddress.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblStreetAddress.setText("Street address");
-        add(lblStreetAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, -1, -1));
 
         lblCity.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblCity.setText("City");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
 
         txtCity.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 180, -1));
 
         lblState.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblState.setText("State");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
 
         lblZipCode.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblZipCode.setText("ZipCode");
-        add(lblZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
 
         txtZipCode.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, 180, -1));
 
         lblContactNumber.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblContactNumber.setText("Contact Number");
-        add(lblContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 280, -1, -1));
 
         txtContactNumber.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        add(txtContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 280, 180, -1));
 
         lblEmailID.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblEmailID.setText("Email ID");
-        add(lblEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, -1));
 
         txtEmailID.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtEmailID.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -335,23 +315,18 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 uEmailKeyTyped(evt);
             }
         });
-        add(txtEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 170, -1));
 
-        lblBrainInjuryConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        lblBrainInjuryConfirmation.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblBrainInjuryConfirmation.setText(" Do you have any history with severe brain injuries? ");
-        add(lblBrainInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 630, -1, -1));
 
-        lblBreathingProblemConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        lblBreathingProblemConfirmation.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblBreathingProblemConfirmation.setText("Do you have any history with breathing problem?");
-        add(lblBreathingProblemConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 570, -1, -1));
 
-        lblDiabetesAndBloodPressureConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        lblDiabetesAndBloodPressureConfirmation.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblDiabetesAndBloodPressureConfirmation.setText("Do you have any history with Diabities and Blood Pressure?");
-        add(lblDiabetesAndBloodPressureConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 510, -1));
 
-        lblChronicPainConfirmation.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        lblChronicPainConfirmation.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblChronicPainConfirmation.setText("Are you suffering with any Chronic pain in the ares of neck, back, or spine?");
-        add(lblChronicPainConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 450, 630, 20));
 
         btnSubmit.setBackground(new java.awt.Color(255, 164, 0));
         btnSubmit.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -361,7 +336,6 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 700, 80, 30));
 
         btnAddPhoto.setBackground(new java.awt.Color(255, 164, 0));
         btnAddPhoto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -371,20 +345,20 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 btnAddPhotoActionPerformed(evt);
             }
         });
-        add(btnAddPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 320, 110, 30));
 
+        buttonGroup2.add(btnYesQ2);
         btnYesQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnYesQ2.setText("No");
-        add(btnYesQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
 
+        buttonGroup2.add(btnNoQ2);
         btnNoQ2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnNoQ2.setText("Yes");
-        add(btnNoQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 540, -1, -1));
 
+        buttonGroup1.add(btnNoQ1);
         btnNoQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnNoQ1.setText("Yes");
-        add(btnNoQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, -1, -1));
 
+        buttonGroup1.add(btnYesQ1);
         btnYesQ1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnYesQ1.setText("No");
         btnYesQ1.addActionListener(new java.awt.event.ActionListener() {
@@ -392,20 +366,20 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 btnYesQ1ActionPerformed(evt);
             }
         });
-        add(btnYesQ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 480, -1, -1));
 
+        buttonGroup3.add(btnNoQ3);
         btnNoQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnNoQ3.setText("Yes");
-        add(btnNoQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 600, -1, -1));
 
+        buttonGroup3.add(btnYesQ3);
         btnYesQ3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnYesQ3.setText("No");
-        add(btnYesQ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, -1, -1));
 
+        buttonGroup4.add(btnNoQ4);
         btnNoQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnNoQ4.setText("Yes");
-        add(btnNoQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
 
+        buttonGroup4.add(btnYesQ4);
         btnYesQ4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnYesQ4.setText("No");
         btnYesQ4.addActionListener(new java.awt.event.ActionListener() {
@@ -413,12 +387,10 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 btnYesQ4ActionPerformed(evt);
             }
         });
-        add(btnYesQ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 660, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setForeground(new java.awt.Color(255, 164, 0));
         lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 164, 0)));
-        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 170, 130, 130));
 
         jButton2.setBackground(new java.awt.Color(255, 164, 0));
         jButton2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -428,7 +400,6 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 700, 100, 30));
 
         cmbState.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         cmbState.addActionListener(new java.awt.event.ActionListener() {
@@ -436,7 +407,6 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 cmbStateActionPerformed(evt);
             }
         });
-        add(cmbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 180, -1));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -459,23 +429,11 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
             .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1690, -1));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 1140, 20));
-
         jLabel2.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         jLabel2.setText("Donor Details");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jLabel23.setText("Address Details");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
-
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 20, 360));
-
-        lblInjuryConfirmation.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        lblInjuryConfirmation.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblInjuryConfirmation.setText("By Registering to join this cause, you are confirming that");
-        add(lblInjuryConfirmation, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
 
         btnBack.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/GovernmentCoordinatorRole/backarrow1.png"))); // NOI18N
@@ -485,7 +443,6 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 670, 80, 70));
 
         dobDateField.setBackground(new java.awt.Color(255, 255, 255));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -510,7 +467,6 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 dobDateFielduDobKeyTyped(evt);
             }
         });
-        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
 
         cmbGender1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         cmbGender1.addActionListener(new java.awt.event.ActionListener() {
@@ -518,11 +474,201 @@ public class DonorRegistrationForm extends javax.swing.JPanel {
                 cmbGender1ActionPerformed(evt);
             }
         });
-        add(cmbGender1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 170, -1));
 
         txtHLAType.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         txtHLAType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "HLA_A", "HLA_B", "HLA_C", "HLA_DR", "HLA_DBQ1", " " }));
-        add(txtHLAType, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 322, 180, 30));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblStreetAddress)
+                                    .addComponent(lblGender)
+                                    .addComponent(lblCity)
+                                    .addComponent(lblState)
+                                    .addComponent(lblZipCode)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(2, 2, 2)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblName)
+                                            .addComponent(lblDate)
+                                            .addComponent(lblEmailID)))
+                                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtZipCode)
+                                        .addComponent(cmbState, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtCity, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(dobDateField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                                        .addComponent(txtEmailID, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cmbGender1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtStreetAddress, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(302, 302, 302)
+                                        .addComponent(jLabel4))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(52, 52, 52)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblRegNum)
+                                                    .addComponent(lblContactNumber)
+                                                    .addComponent(lblAge))
+                                                .addGap(45, 45, 45)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(txtUID, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(70, 70, 70)
+                                                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(lblHLAType)
+                                                .addGap(94, 94, 94)
+                                                .addComponent(txtHLAType, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(80, 80, 80)
+                                                .addComponent(btnAddPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lblInjuryConfirmation)
+                                            .addComponent(lblChronicPainConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblDiabetesAndBloodPressureConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblBreathingProblemConfirmation)
+                                            .addComponent(lblBrainInjuryConfirmation)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnNoQ1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnYesQ1))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnNoQ2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnYesQ2))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnNoQ3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnYesQ3))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnNoQ4)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnYesQ4))))))))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1690, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 302, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblName)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblRegNum)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblDate)
+                            .addComponent(dobDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblEmailID)
+                            .addComponent(txtEmailID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbGender1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblGender))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblStreetAddress)
+                            .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCity)
+                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblState)
+                            .addComponent(cmbState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblZipCode)
+                            .addComponent(txtZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(129, 129, 129)
+                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, 0)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblProfilePicture, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(13, 13, 13)
+                                .addComponent(btnAddPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtUID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(48, 48, 48)
+                                        .addComponent(lblAge)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblContactNumber)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtHLAType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblHLAType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblInjuryConfirmation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblChronicPainConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnYesQ1)
+                            .addComponent(btnNoQ1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblDiabetesAndBloodPressureConfirmation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNoQ2)
+                            .addComponent(btnYesQ2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblBreathingProblemConfirmation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNoQ3)
+                            .addComponent(btnYesQ3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblBrainInjuryConfirmation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNoQ4)
+                            .addComponent(btnYesQ4))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -814,7 +960,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
         txtHLAType.setSelectedItem("Select");
         
         txtHLAType.setSelectedItem("");
-        cmbState.setSelectedItem("");
+        cmbState.setSelectedItem("Select");
         
         dobDateField.setCalendar(null);
         
@@ -1046,17 +1192,18 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><b>Email ID must be in cor
     private javax.swing.JRadioButton btnYesQ2;
     private javax.swing.JRadioButton btnYesQ3;
     private javax.swing.JRadioButton btnYesQ4;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JComboBox cmbGender1;
     private javax.swing.JComboBox cmbState;
     private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblBrainInjuryConfirmation;
     private javax.swing.JLabel lblBreathingProblemConfirmation;
