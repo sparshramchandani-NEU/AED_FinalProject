@@ -179,19 +179,18 @@ public class ManageMedicalTechnicianProfile extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        if(String.valueOf(cmbGender.getSelectedIndex()).equals("Select")){
-            cmbGender.setBorder(BorderFactory.createLineBorder(Color.RED));
-            cmbGender.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, "Please Select Gender");
-            return;
-        }
+        try{
         userAccount.getEmployee().setCity(txtCity.getText());
-        userAccount.getEmployee().setContactNumber(Integer.parseInt(txtContact.getText()));
+        userAccount.getEmployee().setContactNumber(Long.parseLong(txtContact.getText()));
         userAccount.getEmployee().setDateOfBirth(txtDOB.getDate());
         userAccount.getEmployee().setGender((String) cmbGender.getSelectedItem());
         userAccount.getEmployee().setAddress(txtAddress.getText());
         userAccount.getEmployee().setState(txtCity.getText());
         userAccount.getEmployee().setSpecialization(txtSpecialization.getText());
+            JOptionPane.showMessageDialog(null, "Profile Updated");
+        }catch(Exception e){
+            System.out.println(e);
+        }
         
         
     }//GEN-LAST:event_btnSaveActionPerformed

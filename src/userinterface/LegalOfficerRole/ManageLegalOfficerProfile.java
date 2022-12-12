@@ -17,6 +17,7 @@ import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -45,10 +46,22 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
 
     private void populateFields(){
         
+        
+//        txtAddress.setText(userAccount.getEmployee().getAddress());
+            System.out.println(userAccount.getEmployee().getAddress());
+            System.out.println(userAccount.getEmployee().getName());
+            System.out.println(userAccount.getEmployee().getCity());
+            System.out.println(userAccount.getEmployee().getDateOfBirth());
+            System.out.println(userAccount.getEmployee().getContactNumber());
+            System.out.println(userAccount.getEmployee().getSpecialization());
+            System.out.println(userAccount.getEmployee().getGender());
+            System.out.println(userAccount.getEmployee().getState());
+            
+
+            
         cmbGender.removeAllItems();
         cmbGender.addItem("Male");
         cmbGender.addItem("Female");
-//        txtAddress.setText(userAccount.getEmployee().getAddress());
         txtAddress.setText(userAccount.getEmployee().getAddress());
         txtCity.setText(userAccount.getEmployee().getCity());
         txtContact.setText(String.valueOf(userAccount.getEmployee().getContactNumber()));
@@ -179,13 +192,18 @@ public class ManageLegalOfficerProfile extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        try{
         userAccount.getEmployee().setCity(txtCity.getText());
-        userAccount.getEmployee().setContactNumber(Integer.parseInt(txtContact.getText()));
+        userAccount.getEmployee().setContactNumber(Long.parseLong(txtContact.getText()));
         userAccount.getEmployee().setDateOfBirth(txtDOB.getDate());
         userAccount.getEmployee().setGender((String) cmbGender.getSelectedItem());
         userAccount.getEmployee().setAddress(txtAddress.getText());
         userAccount.getEmployee().setState(txtCity.getText());
         userAccount.getEmployee().setSpecialization(txtSpecialization.getText());
+            JOptionPane.showMessageDialog(null, "Profile Updated");
+        }catch(Exception e){
+            System.out.println(e);
+        }
         
         
         
