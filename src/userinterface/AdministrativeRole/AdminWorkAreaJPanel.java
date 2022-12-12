@@ -89,7 +89,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         lblManageOrganization.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
         lblManageOrganization.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblManageOrganization.setText("Manage Oranganization");
+        lblManageOrganization.setText("Manage Organization");
         lblManageOrganization.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblManageOrganization.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
