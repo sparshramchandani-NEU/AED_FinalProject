@@ -1,6 +1,6 @@
 # **Bone Marrow Donation System**
 
-**About**
+## **About**
 
 ----------------------------------------------------------------------------------------------------
 
@@ -8,11 +8,11 @@ We have built an application that allows people who are suffering from blood can
 
 The application allows Donors & Patients to Register and allows the System admin to manage a network, manage enterprises in the selected network and accordingly create the credentials for each enterprise admin. Based on the availability of bone marrow, eligibility of the donor, and consent from the patient, possible treatment will be done by the doctor. The application consists of 5 Enterprises, 7 Organizations & overall 10 roles.
 
-**Structure**
+## **Structure**
 
 ----------------------------------------------------------------------------------------------------
 
-**Enterprises: -**
+### **Enterprises: -**
 
 1. Government Enterprise
 2. Hospital Enterprise
@@ -20,7 +20,7 @@ The application allows Donors & Patients to Register and allows the System admin
 4. Legal Enterprise
 5. Leukemia Curing Enterprise
 
-**Organizations: -**
+### **Organizations: -**
 
 1. Health Resource Service Administration
 2. Bone Marrow Bank Organization
@@ -30,7 +30,7 @@ The application allows Donors & Patients to Register and allows the System admin
 6. Hospital Coordinators Organization
 7. Laboratory Organization
 
-**Roles: -**
+### **Roles: -**
 
 1. **System Admin:** A System Admin can manage networks, choose a network and create Enterprises and credentials for each Enterprise Admin.
 2. **Patient:** A Patient can register to seek Bone Marrow Donation and Cancer Treatment. A patient would also sign the consent for the transplant and treatment.
@@ -43,7 +43,7 @@ The application allows Donors & Patients to Register and allows the System admin
 9. **Leukemia Center Coordinator:** A Leukemia Center Coordinator receives a work request for curing Cancer and checks for eligibility if the treatment can be conducted or not based on the Patient's diagnosis.
 10. **Legal Officer:** A Legal Officer receives a work request for a transplant from the Leukemia Center Coordinator for the procedure and the Legal Officer reviews the decision and decides to approve or reject it.
 
-**Object Diagram**
+# **Object Diagram**
 
 <br>
 <br>
@@ -51,7 +51,7 @@ The application allows Donors & Patients to Register and allows the System admin
 <br>
 <br>
 
-**Class Diagram**
+#**Class Diagram**
 
 <br>
 <br>
