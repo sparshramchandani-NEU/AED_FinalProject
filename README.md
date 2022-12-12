@@ -51,7 +51,7 @@ The application allows Donors & Patients to Register and allows the System admin
 <br>
 <br>
 
-#**Class Diagram**
+# **Class Diagram**
 
 <br>
 <br>
