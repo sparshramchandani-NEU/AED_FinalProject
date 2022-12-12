@@ -33,7 +33,7 @@ public abstract class Organization {
     public enum Type{
         Admin("Admin Organization"), 
         
-        SystemCoordinator("System Coorinator Organization"),
+        SystemCoordinator("System Coordinator Organization"),
         Doctor("Doctor Organization"), 
         MedicalTechnician("MedTech Organization");
         private String value;
