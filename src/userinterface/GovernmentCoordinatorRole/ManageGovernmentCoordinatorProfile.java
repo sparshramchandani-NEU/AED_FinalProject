@@ -20,6 +20,8 @@ import Business.UserAccount.UserAccount;
 import Magic.Design.*;
 import java.util.Date;
 import Magic.Design.MyJLabel;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -140,7 +142,7 @@ private GovernmentOrganization govtOrganization;
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 324, -1, -1));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         cmbGender.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cmbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));
@@ -178,8 +180,16 @@ private GovernmentOrganization govtOrganization;
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        
+//        JOptionPane.
         userAccount.getEmployee().setCity(txtCity.getText());
-        userAccount.getEmployee().setContactNumber(Integer.parseInt(txtContact.getText()));
+        
+         if (!Pattern.matches("^\\d{10}$", txtContact.getText()))
+         {
+             JOptionPane.showMessageDialog(null, "Please Enter Valid Contact Number", "Error", JOptionPane.ERROR_MESSAGE);
+         }else{
+        userAccount.getEmployee().setContactNumber(Long.parseLong(txtContact.getText()));
+         }
         userAccount.getEmployee().setDateOfBirth(txtDOB.getDate());
         userAccount.getEmployee().setGender((String) cmbGender.getSelectedItem());
         userAccount.getEmployee().setAddress(txtAddress.getText());
